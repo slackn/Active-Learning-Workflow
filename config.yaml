@@ -1,0 +1,70 @@
+active_learning:
+  iterations: 1
+
+
+data:
+  dataset_pattern: "data/iter{iter:03d}/dataset_iter{iter:03d}.xyz"
+  iterdir_pattern: "data/iter{iter:03d}"
+  runsdir_pattern: "runs/iter{iter:03d}"  #saves the models per each boot
+  test_file: "data/test.xyz"
+
+prep:
+  val_frac: 0.1
+  min_per_charge: 1
+  n_boot: 5
+  boot_size: 0
+  seed: 123
+
+
+mace:
+  # files are filled per-boot dynamically: the rest stays constant
+  model: MACE
+  num_interactions: 2
+  num_channels: 128
+  max_L: 1
+  r_max: 9.0
+  patience: 20
+  correlation: 3
+  batch_size: 32
+  valid_batch_size: 32
+  max_num_epochs: 300
+  swa: true
+  ema: true
+  ema_decay: 0.99
+  amsgrad: true 
+  error_table: PerAtomMAE
+  device: "cpu"
+  seed: 123
+  E0s: average
+  total_charge_key: charge
+  embedding_specs:
+    total_charge:
+      type: continuous
+      per: graph
+      in_dim: 1
+      emb_dim: 128
+      min: -3 
+      max: 3
+  use_embedding_readout: true
+
+initialization:
+  n_atoms: 8
+  charge: 0
+  n_to_generate: 10
+  element: "Na"
+
+ga:
+  offsprings: 5
+  mutation_prob: 0.7
+  fmax: 0.05
+  opt_steps: 300 
+  n_dft: 10
+
+dft:
+  total_charge: 0
+  multiplicity: 1
+  scf_iter: 1000
+  basis_set: def2-TZVP
+  density_func: pbe
+  fmax: 0.05
+  opt_steps: 300
