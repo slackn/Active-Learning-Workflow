@@ -1,7 +1,7 @@
 import yaml 
 import argparse
 from random import random
-from committee_calc import CommitteeCalculator
+from scripts.committee_calc import CommitteeCalculator
 from ase.optimize import BFGS
 from ase.ga.cutandsplicepairing import CutAndSplicePairing
 from ase.ga.data import DataConnection

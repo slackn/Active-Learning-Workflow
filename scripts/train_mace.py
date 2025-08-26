@@ -16,7 +16,7 @@ def write_config(base_mace_cfg: Dict, train_file: str, valid_file: str,test_file
 
 def train_one(config_yaml: Path):
     # Uses mace_run_train available in your env
-    subprocess.run(["mace_run_train", "--config", str(config_yaml)], 
+    subprocess.run(["mace_run_train", "--config", str(config_yaml.name)], 
     check=True,
     cwd=config_yaml.parent)
 
