@@ -7,7 +7,7 @@ from ase.io import read, write
 from ase.optimize import BFGS
 from ase.calculators.turbomole import Turbomole
 from ase.calculators.singlepoint import SinglePointCalculator
-
+import os
 
 
 
@@ -44,6 +44,9 @@ def submit_dft(cfg, iteration):
 
     ok, bad = [], []
     i=0
+    # Change working directory to put the turbomole files in correct folder
+    old_cwd=os.getcwd()
+    os.chdir(iterdir)
     for a in frames:
         confid = a.info.get("confid", "N/A")
         #a.calc = get_dft_calculator()
@@ -67,6 +70,7 @@ def submit_dft(cfg, iteration):
             a.calc = SinglePointCalculator(a, energy=1e6)
             a.info["confid"] = confid
             bad.append(a)
+    os.chdir(old_cwd)
 
     if ok:
         write(str(out_ok), ok)
