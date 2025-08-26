@@ -1,5 +1,5 @@
 active_learning:
-  iterations: 1
+  iterations: 3
 
 
 data:
