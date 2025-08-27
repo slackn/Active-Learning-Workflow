@@ -14,8 +14,14 @@ class CommitteeCalculator(Calculator):
     def __init__(self, iteration: int, use_forces=True, **kwargs):
         super().__init__(**kwargs)  #optional, it forwards optional ASE Calculator init args like label, directory
         #if you dont need these arguments, call with no kwargs
-        pattern=f"checkpoints/MACE_iter{iteration:03d}_boot*_run-123.model"
-        paths= sorted(glob.glob(pattern))
+        # iteration directory relative to project root
+        iter_dir = Path("runs") / f"iter{iteration:03d}"
+
+        # look inside every boot_xxx/checkpoints/ for model files
+        pattern = str(iter_dir / "boot_*" / "checkpoints" / f"MACE_iter{iteration:03d}_boot*_run-123.model")
+        paths = sorted(glob.glob(pattern))
+        #pattern=f"checkpoints/MACE_iter{iteration:03d}_boot*_run-123.model"
+        #paths= sorted(glob.glob(pattern))
         if not paths:
             raise FileNotFoundError(f"No models found with pattern {pattern}")
         self.members= [MACECalculator(model_path=p, device="cpu")for p in paths]

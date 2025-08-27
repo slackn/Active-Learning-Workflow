@@ -3,6 +3,11 @@ import argparse, json, subprocess, yaml
 from pathlib import Path
 from typing import Dict, List
 
+def relative_path(old_path):
+    return str(Path("../../../")/ old_path)
+
+
+# Prepare per-model config files for training
 def write_config(base_mace_cfg: Dict, train_file: str, valid_file: str,test_file:str, results_dir: str, name: str, out_path: Path):
     cfg = dict(base_mace_cfg)  # shallow copy is fine for flat dicts
     cfg["train_file"] = train_file
@@ -33,18 +38,19 @@ def train_ensemble_for_iteration(cfg: Dict, manifest_path: Path):
 
     runs_dir = Path(cfg["data"]["runsdir_pattern"].format(iter=it))
     runs_dir.mkdir(parents=True, exist_ok=True)
+    #burasi runsdir olarak runs icinde iter000 aciyor
 
     base_mace_cfg = cfg["mace"]
 
-    # Create per-boot configs
+    # Create per-boot configs and directories
     written = []
     for b in boots:
         boot_idx = b["idx"]            # 1..N
-        train_file = b["path"]         # data/iter000/train_boot_001.xyz
-        model_dir = runs_dir / f"boot_{boot_idx:03d}"
-        config_out = model_dir / "config.yaml"
+        train_file =b["path"]         # data/iter000/train_boot_001.xyz
+        model_dir = runs_dir / f"boot_{boot_idx:03d}"   #runs/iter000/boot_001/
+        config_out = model_dir / "config.yaml"          #runs/iter000/boot_001/config.yaml
         name = f"MACE_iter{it:03d}_boot{boot_idx:03d}"
-        write_config(base_mace_cfg, train_file, valid_file,test_file, str(model_dir), name, config_out)
+        write_config(base_mace_cfg, relative_path(train_file), relative_path(valid_file),relative_path(test_file), str(model_dir), name, config_out)
         written.append(config_out)
 
     # Sequential training (simple). You can parallelize via SLURM arrays below.
