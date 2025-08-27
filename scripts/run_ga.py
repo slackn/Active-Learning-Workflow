@@ -186,7 +186,8 @@ def run_ga(cfg:dict, iteration):
 
     import math
     from ase.db import connect
-
+    
+    """
     # Make uncertainty ranking
     top_k = cfg["ga"]["n_dft"]
     scored = []
@@ -233,7 +234,8 @@ def run_ga(cfg:dict, iteration):
     print(f"[DFT] Saved {len(chosen_rows)} structures → {out_xyz}")
 
 
-
+    """
+    
     # Get all relaxed candidates from the database
     candidates_list=list(db.get_all_relaxed_candidates())
     # Sort relaxed candidates by decreasing sigma_E_pa
