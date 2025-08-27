@@ -1,0 +1,67 @@
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2025-08-26 18:59:05.902 INFO: ===========VERIFYING SETTINGS===========
+2025-08-26 18:59:05.903 INFO: MACE version: 0.3.14
+2025-08-26 18:59:05.904 INFO: Using CPU
+2025-08-26 18:59:06.059 INFO: ===========LOADING INPUT DATA===========
+2025-08-26 18:59:06.059 INFO: Using heads: ['Default']
+2025-08-26 18:59:06.059 INFO: Using the key specifications to parse data:
+2025-08-26 18:59:06.059 INFO: Default: KeySpecification(info_keys={'energy': 'REF_energy', 'stress': 'REF_stress', 'virials': 'REF_virials', 'dipole': 'dipole', 'head': 'head', 'elec_temp': 'elec_temp', 'total_charge': 'charge', 'polarizability': 'polarizability', 'total_spin': 'total_spin'}, arrays_keys={'forces': 'REF_forces', 'charges': 'REF_charges'})
+2025-08-26 18:59:06.060 INFO: =============    Processing head Default     ===========
+Traceback (most recent call last):
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/bin/mace_run_train", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/cli/run_train.py", line 77, in main
+    run(args)
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/cli/run_train.py", line 297, in run
+    collections, atomic_energies_dict = get_dataset_from_xyz(
+                                        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/tools/scripts_utils.py", line 104, in get_dataset_from_xyz
+    ae_dict, train_configs = data.load_from_xyz(
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/data/utils.py", line 225, in load_from_xyz
+    atoms_list = ase.io.read(file_path, index=":")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/io/formats.py", line 808, in read
+    format = format or filetype(filename, read=isinstance(filename, str))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/io/formats.py", line 983, in filetype
+    fd = open_with_compression(filename, 'rb')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/io/formats.py", line 612, in open_with_compression
+    return open(filename, mode)
+           ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/iter000/train_boot_001.xyz'
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+0
+[train] runs/iter000/boot_001/config.yaml
+Traceback (most recent call last):
+  File "/pfs/data6/home/ka/ka_iti/ka_ds7488/al_project/Active-Learning-Workflow/active_learning_loop.py", line 34, in <module>
+    train_ensemble_for_iteration(cfg, manifest_path)
+  File "/pfs/data6/home/ka/ka_iti/ka_ds7488/al_project/Active-Learning-Workflow/scripts/train_mace.py", line 53, in train_ensemble_for_iteration
+    train_one(conf)
+  File "/pfs/data6/home/ka/ka_iti/ka_ds7488/al_project/Active-Learning-Workflow/scripts/train_mace.py", line 19, in train_one
+    subprocess.run(["mace_run_train", "--config", str(config_yaml.name)], 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['mace_run_train', '--config', 'config.yaml']' returned non-zero exit status 1.
+
+============================= JOB FEEDBACK =============================
+
+NodeName=uc3n002
+Job ID: 1246423
+Cluster: uc3
+User/Group: ka_ds7488/ka_iti
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 2
+CPU Utilized: 00:00:11
+CPU Efficiency: 12.50% of 00:01:28 core-walltime
+Job Wall-clock time: 00:00:44
+Memory Utilized: 523.32 MB
+Memory Efficiency: 13.08% of 3.91 GB (1.95 GB/core)

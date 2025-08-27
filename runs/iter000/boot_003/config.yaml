@@ -1,0 +1,33 @@
+model: MACE
+num_interactions: 2
+num_channels: 128
+max_L: 1
+r_max: 9.0
+patience: 20
+correlation: 3
+batch_size: 32
+valid_batch_size: 32
+max_num_epochs: 300
+swa: true
+ema: true
+ema_decay: 0.99
+amsgrad: true
+error_table: PerAtomMAE
+device: cpu
+seed: 123
+E0s: average
+total_charge_key: charge
+embedding_specs:
+  total_charge:
+    type: continuous
+    per: graph
+    in_dim: 1
+    emb_dim: 128
+    min: -3
+    max: 3
+use_embedding_readout: true
+train_file: data/iter000/train_boot_003.xyz
+valid_file: data/iter000/valid.xyz
+test_file: data/test.xyz
+results_dir: .
+name: MACE_iter000_boot003

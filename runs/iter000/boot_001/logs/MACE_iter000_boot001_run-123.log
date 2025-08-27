@@ -1,0 +1,8 @@
+2025-08-26 18:59:05.902 INFO: ===========VERIFYING SETTINGS===========
+2025-08-26 18:59:05.903 INFO: MACE version: 0.3.14
+2025-08-26 18:59:05.904 INFO: Using CPU
+2025-08-26 18:59:06.059 INFO: ===========LOADING INPUT DATA===========
+2025-08-26 18:59:06.059 INFO: Using heads: ['Default']
+2025-08-26 18:59:06.059 INFO: Using the key specifications to parse data:
+2025-08-26 18:59:06.059 INFO: Default: KeySpecification(info_keys={'energy': 'REF_energy', 'stress': 'REF_stress', 'virials': 'REF_virials', 'dipole': 'dipole', 'head': 'head', 'elec_temp': 'elec_temp', 'total_charge': 'charge', 'polarizability': 'polarizability', 'total_spin': 'total_spin'}, arrays_keys={'forces': 'REF_forces', 'charges': 'REF_charges'})
+2025-08-26 18:59:06.060 INFO: =============    Processing head Default     ===========
