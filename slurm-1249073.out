@@ -1,0 +1,136 @@
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+WARNING:root:'model_path' argument is deprecated, please use 'model_paths' in the future.
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/calculators/mace.py:197: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+WARNING:root:'model_path' argument is deprecated, please use 'model_paths' in the future.
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/calculators/mace.py:197: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+WARNING:root:'model_path' argument is deprecated, please use 'model_paths' in the future.
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/calculators/mace.py:197: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+WARNING:root:'model_path' argument is deprecated, please use 'model_paths' in the future.
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/calculators/mace.py:197: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+WARNING:root:'model_path' argument is deprecated, please use 'model_paths' in the future.
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/calculators/mace.py:197: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/pfs/data6/home/ka/ka_iti/ka_ds7488/al_project/Active-Learning-Workflow/scripts/run_ga.py:139: FutureWarning: Please use atoms.calc = calc
+  child.set_calculator(committee_calc)
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+0
+Using head Default out of ['Default']
+No dtype selected, switching to float64 to match model dtype.
+Using head Default out of ['Default']
+No dtype selected, switching to float64 to match model dtype.
+Using head Default out of ['Default']
+No dtype selected, switching to float64 to match model dtype.
+Using head Default out of ['Default']
+No dtype selected, switching to float64 to match model dtype.
+Using head Default out of ['Default']
+No dtype selected, switching to float64 to match model dtype.
+
+[Population] Current population size: 10
+
+[GA] Starting candidate 1/5
+[GA] Selected parents:
+   Parent 1: confid=7
+   Parent 2: confid=5
+Offspring relaxation starts.
+
+[GA] Starting candidate 2/5
+[GA] Selected parents:
+   Parent 1: confid=4
+   Parent 2: confid=5
+[GA] Mutation applied.
+Offspring relaxation starts.
+
+[GA] Starting candidate 3/5
+[GA] Selected parents:
+   Parent 1: confid=3
+   Parent 2: confid=38
+[GA] Mutation applied.
+Offspring relaxation starts.
+
+[GA] Starting candidate 4/5
+[GA] Selected parents:
+   Parent 1: confid=3
+   Parent 2: confid=5
+[GA] Mutation applied.
+Offspring relaxation starts.
+
+[GA] Starting candidate 5/5
+[GA] Selected parents:
+   Parent 1: confid=41
+   Parent 2: confid=38
+Offspring relaxation starts.
+confid=8, energy uncertainty=0.06584309091572836, force uncertainty=6.7517629971448365e-06
+confid=2, energy uncertainty=0.065842228239153, force uncertainty=5.714318245300031e-06
+confid=10, energy uncertainty=0.06584158263888705, force uncertainty=8.193838736830042e-06
+confid=9, energy uncertainty=0.06584156524725149, force uncertainty=6.856819576171592e-06
+confid=44, energy uncertainty=0.0658415544428714, force uncertainty=8.141664048847298e-06
+confid=6, energy uncertainty=0.06584137236673338, force uncertainty=1.136636607508333e-05
+confid=11, energy uncertainty=0.0658413262395487, force uncertainty=7.142771476457232e-06
+confid=7, energy uncertainty=0.06584046155394087, force uncertainty=7.464492389430792e-06
+confid=33, energy uncertainty=0.06584040384629329, force uncertainty=7.0595952828713705e-06
+confid=22, energy uncertainty=0.06584034436976784, force uncertainty=5.576063953414868e-06
+confid=25, energy uncertainty=0.06584028560452744, force uncertainty=3.3898348870311176e-06
+confid=36, energy uncertainty=0.06584022916703151, force uncertainty=6.1083130331741735e-06
+confid=30, energy uncertainty=0.06584012271953725, force uncertainty=7.036529481296585e-06
+confid=5, energy uncertainty=0.06583965298184212, force uncertainty=5.218121402571807e-06
+confid=3, energy uncertainty=0.06583892117619045, force uncertainty=6.384659030500718e-06
+confid=41, energy uncertainty=0.06583882545308863, force uncertainty=8.531410707385334e-06
+confid=4, energy uncertainty=0.06583851518120916, force uncertainty=8.790415765000167e-06
+confid=28, energy uncertainty=0.06583847584846299, force uncertainty=7.145627334610352e-06
+confid=47, energy uncertainty=0.06583800522385004, force uncertainty=5.499789133478266e-06
+confid=38, energy uncertainty=0.06583738109163045, force uncertainty=5.43134042671177e-06
+Wrote 10 structures → data/iter000/selected_for_dft.xyz
+[DFT] Loaded 10 structures from data/iter000/selected_for_dft.xyz
+[DFT] Relaxing confid=N/A
+Traceback (most recent call last):
+  File "/pfs/data6/home/ka/ka_iti/ka_ds7488/al_project/Active-Learning-Workflow/active_learning_loop.py", line 42, in <module>
+    submit_dft(cfg, it)
+  File "/pfs/data6/home/ka/ka_iti/ka_ds7488/al_project/Active-Learning-Workflow/scripts/submit_dft.py", line 58, in submit_dft
+    dyn.run(fmax=fmax, steps=steps)
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/optimize/optimize.py", line 417, in run
+    return Dynamics.run(self, steps=steps)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/optimize/optimize.py", line 286, in run
+    for converged in Dynamics.irun(self, steps=steps):
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/optimize/optimize.py", line 236, in irun
+    self.optimizable.get_forces()
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/optimize/optimize.py", line 37, in get_forces
+    return self.atoms.get_forces()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/atoms.py", line 829, in get_forces
+    forces = self._calc.get_forces(self)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/calculators/turbomole/turbomole.py", line 539, in get_forces
+    self.get_potential_energy(atoms)
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/calculators/turbomole/turbomole.py", line 518, in get_potential_energy
+    self.initialize()
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/calculators/turbomole/turbomole.py", line 242, in initialize
+    execute(['define'], input_str=define_str)
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/calculators/turbomole/executor.py", line 27, in execute
+    proc = Popen(args, stdin=PIPE, stderr=PIPE, stdout=stdout,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'define'
+
+============================= JOB FEEDBACK =============================
+
+NodeName=uc3n002
+Job ID: 1249073
+Cluster: uc3
+User/Group: ka_ds7488/ka_iti
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 2
+CPU Utilized: 00:00:08
+CPU Efficiency: 14.81% of 00:00:54 core-walltime
+Job Wall-clock time: 00:00:27
+Memory Utilized: 9.88 MB
+Memory Efficiency: 0.25% of 3.91 GB (1.95 GB/core)
