@@ -27,13 +27,15 @@ with open(args.config) as f:
 
 for it in range(0, cfg["active_learning"]["iterations"]):
     print(it)
-    manifest=run_bootstrap(cfg, iteration=it)
+    if it!=0:
+        #Prepare bootstrapped training datasets
+        manifest=run_bootstrap(cfg, iteration=it)
 
-    manifest_path=Path(manifest["outdir"]) / "manifest.json"
-    # Train ensemble for this iteration 
-    train_ensemble_for_iteration(cfg, manifest_path)
-    # Create initial random population
-    create_db(cfg, it)
+        manifest_path=Path(manifest["outdir"]) / "manifest.json"
+        # Train ensemble for this iteration 
+        train_ensemble_for_iteration(cfg, manifest_path)
+        # Create initial random population
+        create_db(cfg, it)
     # Run genetic algorithm and select uncertain candidates
     run_ga(cfg, it)
     # Submit dft labeling 
