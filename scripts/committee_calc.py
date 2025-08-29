@@ -18,7 +18,7 @@ class CommitteeCalculator(Calculator):
         #if you dont need these arguments, call with no kwargs
         # iteration directory relative to project root
         # look inside every boot_xxx/checkpoints/ for model files
-        pattern = str(iter_dir / "boot_*" / "checkpoints" / f"MACE_iter{iteration:03d}_boot*_run-123.model")
+        pattern = str(iter_dir / "boot_*" / "checkpoints" / f"MACE_iter{iteration:03d}_boot*_run-123_stagetwo.model")
         paths = sorted(glob.glob(pattern))
         #pattern=f"checkpoints/MACE_iter{iteration:03d}_boot*_run-123.model"
         #paths= sorted(glob.glob(pattern))
