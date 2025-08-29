@@ -38,8 +38,7 @@ for it in range(0, cfg["active_learning"]["iterations"]):
     # Train ensemble for this iteration 
     train_ensemble_for_iteration(cfg, manifest_path)
     # Compute mean test MAE after training
-    iter_dir = base_dir / f"iter{it:03d}"
-    first_mae, second_mae = compute_mean_test_mae_for_iteration(iter_dir)
+    first_mae, second_mae = compute_mean_test_mae_for_iteration(it)
     first_average_errors.append(first_mae)
     second_average_errors.append(second_mae)
     print("Average mae per atom on test data in stage one: ", first_mae)

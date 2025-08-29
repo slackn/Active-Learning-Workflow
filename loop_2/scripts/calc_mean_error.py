@@ -17,9 +17,10 @@ def extract_test_maes(logfile: Path):
     return maes  # could be [] if no TEST table
 
 
-def compute_mean_test_maes_for_iteration(iter_dir: Path, iter_num: int):
+def compute_mean_test_mae_for_iteration( iter_num: int):
     """Compute mean of first and second TEST MAE across all runs in an iteration."""
     first_maes, second_maes = [], []
+    iter_dir = Path("runs") / f"iter{iter_num:03d}"
     pattern = f"MACE_iter{iter_num:03d}_boot*_run-*.log"
 
     for logfile in iter_dir.glob(f"boot_*/logs/{pattern}"):
@@ -46,8 +47,8 @@ def main():
 
     args = parser.parse_args()
 
-    iter_dir = Path("runs") / f"iter{args.iter:03d}"
-    first_mean, second_mean = compute_mean_test_maes_for_iteration(iter_dir, args.iter)
+    
+    first_mean, second_mean = compute_mean_test_mae_for_iteration( args.iter)
 
     if first_mean is not None:
         print(f"[Iter {args.iter}] First TEST MAE  = {first_mean:.2f} meV/atom")
