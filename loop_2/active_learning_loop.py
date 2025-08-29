@@ -3,6 +3,7 @@ import yaml
 
 from scripts.bootstrap import run_bootstrap
 from scripts.train_mace import train_ensemble_for_iteration
+from scripts.calc_mean_error import compute_mean_test_mae_for_iteration
 from scripts.create_db import create_db
 from scripts.run_ga import run_ga
 from scripts.submit_dft import submit_dft
