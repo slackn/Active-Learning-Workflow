@@ -11,7 +11,7 @@ class CommitteeCalculator(Calculator):
     Loads only files named like:
       checkpoints/MACE_iter{iteration:03d}_boot*_run-123.model
     """
-    implemented_properties= ["energy", "forces", "sigma_E_per_atom","sigma_F_mean"]
+    implemented_properties= ["energy", "forces", "sigma_E_pa","sigma_F_mean"]
 
     def __init__(self, iteration: int, use_forces=True, **kwargs):
         super().__init__(**kwargs)  #optional, it forwards optional ASE Calculator init args like label, directory
