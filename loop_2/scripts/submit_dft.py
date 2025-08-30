@@ -94,6 +94,18 @@ def submit_dft(cfg, iteration):
 
     # try multiprocessing
     p= Pool(10)
+
+    results = p.map(relax_one, frames_with_idx)
+
+    for ok_flag, result_frame in results:
+        if ok_flag:
+            ok.append(result_frame)
+        else:
+            bad.append(result_frame)
+
+
+
+    """
     ok_flag, result_frame=p.map(relax_one, frames_with_idx)
 
 
@@ -101,7 +113,7 @@ def submit_dft(cfg, iteration):
         ok.append(result_frame)
     elif not (ok_flag):
         bad.append(result_frame)
-
+    """
     p.close()
     p.join()
 
