@@ -22,7 +22,7 @@ def run_ga(cfg:dict, iteration):
     charge=cfg["initialization"]["charge"]
     n_to_generate=cfg["initialization"]["n_to_generate"]
     element=cfg["initialization"]["element"]
-    db_name = f"data/iter{iteration:03d}/{element}{n_atoms}_q{charge}.db"
+    db_name = f"data/iter{iteration:03d}/iter{iteration:03d}_{element}{n_atoms}_q{charge}.db"
     offsprings= cfg["ga"]["offsprings"]
     mutation_probability= cfg["ga"]["mutation_prob"]
     fmax=cfg["ga"]["fmax"]
@@ -76,25 +76,12 @@ def run_ga(cfg:dict, iteration):
         atoms= db.get_an_unrelaxed_candidate()
         confid=atoms.info.get('confid', 'N/A')
 
-        atoms.set_calculator(committee_calc)
+        atoms.set_calculator(committee_calc)    # this gives a future warning
+        atoms.calc=committee_calc
         print(f"[GA] Relaxing initial random structure confid={confid}")
         dyn=BFGS(atoms,logfile="opt_initial.log")
         dyn.run(fmax, opt_steps)
 
-        # Add uncertainity measures
-        
-        #sigma_E_pa= float(atoms.calc.results.get("sigma_E_per_atom"))
-        #sigma_F_mean= float(atoms.calc.results.get("sigma_F_mean"))
-        #E= float(atoms.calc.results.get("energy"))
-        """kv = {
-            "sigma_E_per_atom": sigma_E_pa,
-            "sigma_F_mean": sigma_F_mean,
-            "energy": E
-        } """
-
-        #atoms.info["committee_energy"]  = E               # keep distinct from later DFT "energy"
-        #atoms.info["sigma_E_per_atom"]  = sigma_E_pa
-        #atoms.info["sigma_F_mean"]      = sigma_F_mean
         E=atoms.get_potential_energy()
         atoms.info['key_value_pairs']['raw_score'] = -E
         db.add_relaxed_step(atoms)
@@ -136,108 +123,18 @@ def run_ga(cfg:dict, iteration):
                 child = mutated_child
                 print("[GA] Mutation applied.")
 
-        child.set_calculator(committee_calc)
+        child.set_calculator(committee_calc)    # this gives a future warning
+        child.calc=committee_calc
         dyn=BFGS(child, logfile="child_opt.log")
         print('Offspring relaxation starts.')
         dyn.run(fmax, opt_steps)
 
-        # Add uncertainity measures
-        #sigma_E_pa= float(child.calc.results.get("sigma_E_per_atom"))
-        #sigma_F_mean= float(child.calc.results.get("sigma_F_mean"))
-        #E= float(child.calc.results.get("energy"))
-        """         kv = {
-            "sigma_E_per_atom": sigma_E_pa,
-            "sigma_F_mean": sigma_F_mean,
-            "energy": E
-        } """
-        #print("E: ",E)
-        #print("Std of E per atom: ", sigma_E_pa)
-        #print("Std of F mean: ", sigma_F_mean)
-        
-        #child.info["committee_energy"]  = E               # keep distinct from later DFT "energy"
-        #child.info["sigma_E_per_atom"]  = sigma_E_pa
-        #child.info["sigma_F_mean"]      = sigma_F_mean
         E=child.get_potential_energy()
         child.info['key_value_pairs']['raw_score'] = -E
     
         db.add_relaxed_step(child)
         population.update()
 
-    # Make uncertainty ranking 
-    """     top_k=cfg["ga"]["n_dft"]
-    scored=[]
-    for ind in population.pop:
-        confid=ind.info.get("confid")
-        if confid is None:
-            print("population.pop or ind.info.get() does not work")
-            continue
-        last_row=None
-        for row in db.select(confid=confid, relaxed=1):
-            last_row=row
-        if last_row is None:
-            print("The structure is not relaxed.")
-        sE= float(last_row.key_value_pairs.get("sigma_E_per_atom", "nan"))
-        if math.isnan(sE):
-            continue
-        scored.append((sE, last_row))
-    # sort by uncertainty (high → low) and take top_k
-    scored.sort(key=lambda t: t[0], reverse=True)
-    chosen_rows = [r for _, r in scored[:top_k]] """
-
-    import math
-    from ase.db import connect
-    
-    """
-    # Make uncertainty ranking
-    top_k = cfg["ga"]["n_dft"]
-    scored = []
-
-    # Restrict to current population members
-    pop_confids = {ind.info.get("confid") for ind in population.pop if ind.info.get("confid") is not None}
-
-    # Collect the *last* relaxed row per confid
-    last_by_confid = {}
-    with connect(db_name) as dbc:
-        for row in dbc.select(relaxed=1):
-            c = row.data.get("confid") or row.key_value_pairs.get("confid")
-            print(c)
-            if c is None:
-                continue
-            if c in pop_confids:
-                last_by_confid[c] = row  # later row overwrites earlier ones
-
-    # Score by uncertainty (sigma_E_per_atom here; change if you want hybrid)
-    for c, row in last_by_confid.items():
-        sE = row.data.get("sigma_E_per_atom")
-        if sE is None:
-            continue
-        try:
-            sE = float(sE)
-            if math.isnan(sE):
-                continue
-        except Exception:
-            continue
-        scored.append((sE, row))
-
-    # sort by uncertainty (high → low) and take top_k
-    scored.sort(key=lambda t: t[0], reverse=True)
-    print(scored)
-    chosen_rows = [r for _, r in scored[:top_k]]
-
-
-
-
-
-    # write a single concatenated XYZ for DFT
-    out_xyz = f"data/iter{iteration:03d}/selected_for_dft.xyz"
-    write(out_xyz, [r.toatoms() for r in chosen_rows])
-    print(f"[DFT] Saved {len(chosen_rows)} structures → {out_xyz}")
-
-
-    """
-    
-    # Get all relaxed candidates from the database
-    #candidates_list=list(db.get_all_relaxed_candidates())
 
     candidates_list=list(population.pop)
 
@@ -254,7 +151,8 @@ def run_ga(cfg:dict, iteration):
         kv=structure.info.get("key_value_pairs",{})
         sigma_E_pa= float(kv.get("sigma_E_pa", float("nan")))
         sigma_F_mean=float(kv.get("sigma_F_mean", float("nan")))
-        print(f"confid={confid}, energy uncertainty={sigma_E_pa}, force uncertainty={sigma_F_mean}")
+        raw_score=kv.get("raw_score")
+        print(f"confid={confid}, raw score={raw_score}, energy uncertainty={sigma_E_pa}, force uncertainty={sigma_F_mean}")
 
 
     n_dft=cfg["ga"]["n_dft"]

@@ -40,6 +40,9 @@ def relax_one(args):
         E = a.get_potential_energy()
         # keep handy metadata in XYZ comment
         a.info["energy"] = float(E)
+        #a.info["raw_score"]=float(-E)
+        a.info['key_value_pairs']['raw_score'] = -E
+
         a.info["confid"] = confid
         #a.info["element"] = element
         a.info["charge"]  = charge
@@ -50,7 +53,10 @@ def relax_one(args):
         print(f"[DFT] confid={confid}, atoms_{i:03d} FAILED (SCF): {e}")
         # write a placeholder energy so file remains readable
         a.calc = SinglePointCalculator(a, energy=1e6)
+        #a.info["raw_score"]=float(-1e6)
+        a.info['key_value_pairs']['raw_score'] = float(-1e6)
         a.info["confid"] = confid
+        a.info["charge"]  = charge
         #bad.append(a)
         ok_flag=False
     finally:
@@ -100,20 +106,11 @@ def submit_dft(cfg, iteration):
     for ok_flag, result_frame in results:
         if ok_flag:
             ok.append(result_frame)
+            print("Added frame to successfull results list.")
         else:
             bad.append(result_frame)
+            print("Added frame to unsuccessfull results list.")
 
-
-
-    """
-    ok_flag, result_frame=p.map(relax_one, frames_with_idx)
-
-
-    if ok_flag:
-        ok.append(result_frame)
-    elif not (ok_flag):
-        bad.append(result_frame)
-    """
     p.close()
     p.join()
 

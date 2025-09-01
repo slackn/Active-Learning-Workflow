@@ -54,7 +54,7 @@ initialization:
   element: "Na"
 
 ga:
-  offsprings: 5
+  offsprings: 10
   mutation_prob: 0.7
   fmax: 0.05
   opt_steps: 300 

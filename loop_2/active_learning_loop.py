@@ -10,6 +10,8 @@ from scripts.submit_dft import submit_dft
 from scripts.merge import merge_datasets
 from pathlib import Path
 import matplotlib.pyplot as pyplot
+from ase.io import read
+
 
 # Parse arguments in command 
 parser= argparse.ArgumentParser()
@@ -50,6 +52,19 @@ for it in range(0, cfg["active_learning"]["iterations"]):
     run_ga(cfg, it)
     # Submit dft labeling 
     submit_dft(cfg, it)
+    # Check if there are successfully converged structures, if not run the genetic algorithm again
+    relaxed_file_path=Path(f"data/iter{it:03d}/dft_relaxed.xyz")
+    if file_path.exists():
+         # Read all structures in the XYZ file
+        structures = read(relaxed_file_path, index=":")  # index=":" reads all frames
+        if len(structures) > 5:
+            print(f"{relaxed_file_path} exists and has {len(structures)} structures → OK")
+        else:
+            print(f"{relaxed_file_path} exists but has only {len(structures)} structures. Running GA again!")
+            run_ga(cfg, it)
+    else:
+        print(f"{relaxed_file_path} does not exist! Running the genetic algorithm again!")
+        run_ga(cfg, it)
     # Merge dft labels and existing data
     merge_datasets(it, include_failed=False)
 
