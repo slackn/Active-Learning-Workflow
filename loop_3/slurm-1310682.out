@@ -1,0 +1,1493 @@
+
+  TURBOMOLE 7.9 @ PARA_ARCH=SEQ loaded to current session/environment.
+
+  Dependent module system/ssh_wrapper  loaded to current session/environment.
+
+/opt/bwhpc/common/chem/turbomole/TmoleX2025/TURBOMOLE_COMPUTE/bin/x86_64-unknown-linux-gnu/define
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2025-09-01 14:34:54.565 INFO: ===========VERIFYING SETTINGS===========
+2025-09-01 14:34:54.566 INFO: MACE version: 0.3.14
+2025-09-01 14:34:54.566 INFO: Using CPU
+2025-09-01 14:34:54.733 INFO: ===========LOADING INPUT DATA===========
+2025-09-01 14:34:54.733 INFO: Using heads: ['Default']
+2025-09-01 14:34:54.733 INFO: Using the key specifications to parse data:
+2025-09-01 14:34:54.734 INFO: Default: KeySpecification(info_keys={'energy': 'REF_energy', 'stress': 'REF_stress', 'virials': 'REF_virials', 'dipole': 'dipole', 'head': 'head', 'elec_temp': 'elec_temp', 'total_charge': 'charge', 'polarizability': 'polarizability', 'total_spin': 'total_spin'}, arrays_keys={'forces': 'REF_forces', 'charges': 'REF_charges'})
+2025-09-01 14:34:54.734 INFO: =============    Processing head Default     ===========
+2025-09-01 14:34:54.759 INFO: Training set 1/1 [energy: 43, stress: 0, virials: 0, dipole components: 0, head: 43, elec_temp: 0, total_charge: 43, polarizability: 0, total_spin: 0, forces: 43, charges: 0]
+2025-09-01 14:34:54.759 INFO: Total Training set [energy: 43, stress: 0, virials: 0, dipole components: 0, head: 43, elec_temp: 0, total_charge: 43, polarizability: 0, total_spin: 0, forces: 43, charges: 0]
+2025-09-01 14:34:54.762 INFO: Validation set 1/1 [energy: 5, stress: 0, virials: 0, dipole components: 0, head: 5, elec_temp: 0, total_charge: 5, polarizability: 0, total_spin: 0, forces: 5, charges: 0]
+2025-09-01 14:34:54.762 INFO: Total Validation set [energy: 5, stress: 0, virials: 0, dipole components: 0, head: 5, elec_temp: 0, total_charge: 5, polarizability: 0, total_spin: 0, forces: 5, charges: 0]
+2025-09-01 14:34:54.767 INFO: Test set 1/1 [energy: 12, stress: 0, virials: 0, dipole components: 0, head: 12, elec_temp: 0, total_charge: 12, polarizability: 0, total_spin: 0, forces: 12, charges: 0]
+2025-09-01 14:34:54.767 INFO: Total Test set [energy: 12, stress: 0, virials: 0, dipole components: 0, head: 12, elec_temp: 0, total_charge: 12, polarizability: 0, total_spin: 0, forces: 12, charges: 0]
+2025-09-01 14:34:54.767 INFO: Total number of configurations: train=43, valid=5, tests=[Default_Default: 12],
+2025-09-01 14:34:54.767 WARNING: Validation batch size (32) is larger than the number of validation data (5)
+2025-09-01 14:34:54.767 INFO: Atomic Numbers used: [11]
+2025-09-01 14:34:54.767 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2025-09-01 14:34:54.767 INFO: Computing average Atomic Energies using least squares regression
+2025-09-01 14:34:54.783 INFO: Atomic Energies used (z: eV) for head Default: {11: -55.485947761505116}
+2025-09-01 14:34:54.783 INFO: Processing datasets for head 'Default'
+2025-09-01 14:34:54.825 INFO: Combining 1 list datasets for head 'Default'
+2025-09-01 14:34:54.826 INFO: Combining 1 list datasets for head 'Default_valid'
+2025-09-01 14:34:54.826 INFO: Combined validation datasets for Default
+2025-09-01 14:34:54.826 INFO: Head 'Default' training dataset size: 43
+2025-09-01 14:34:54.827 INFO: Computing average number of neighbors
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/utils/data/dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+2025-09-01 14:34:54.882 INFO: Average number of neighbors: 6.0546875
+2025-09-01 14:34:54.882 INFO: During training the following quantities will be reported: energy, forces
+2025-09-01 14:34:54.882 INFO: ===========MODEL DETAILS===========
+2025-09-01 14:34:54.934 INFO: Using embedding specifications from command line arguments
+2025-09-01 14:34:54.934 INFO: Embedding specifications: {'total_charge': {'type': 'continuous', 'per': 'graph', 'in_dim': 1, 'emb_dim': 128, 'min': -3, 'max': 3}}
+2025-09-01 14:34:54.934 INFO: Building model
+2025-09-01 14:34:54.934 INFO: Message passing with 128 channels and max_L=1 (128x0e+128x1o)
+2025-09-01 14:34:54.934 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2025-09-01 14:34:54.934 INFO: 8 radial and 5 basis functions
+2025-09-01 14:34:54.934 INFO: Radial cutoff: 9.0 A (total receptive field for each atom: 18.0 A)
+2025-09-01 14:34:54.934 INFO: Distance transform for radial basis functions: None
+2025-09-01 14:34:54.935 INFO: Hidden irreps: 128x0e+128x1o
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+2025-09-01 14:34:55.823 INFO: Total number of parameters: 591888
+2025-09-01 14:34:55.823 INFO: 
+2025-09-01 14:34:55.823 INFO: ===========OPTIMIZER INFORMATION===========
+2025-09-01 14:34:55.823 INFO: Using ADAM as parameter optimizer
+2025-09-01 14:34:55.823 INFO: Batch size: 32
+2025-09-01 14:34:55.823 INFO: Using Exponential Moving Average with decay: 0.99
+2025-09-01 14:34:55.823 INFO: Number of gradient updates: 403
+2025-09-01 14:34:55.823 INFO: Learning rate: 0.01, weight decay: 5e-07
+2025-09-01 14:34:55.823 INFO: WeightedEnergyForcesLoss(energy_weight=1.000, forces_weight=100.000)
+2025-09-01 14:34:55.824 INFO: Stage Two (after 225 epochs) with loss function: WeightedEnergyForcesLoss(energy_weight=1000.000, forces_weight=100.000), with energy weight : 1000.0, forces weight : 100.0 and learning rate : 0.001
+2025-09-01 14:34:55.908 INFO: Using gradient clipping with tolerance=10.000
+2025-09-01 14:34:55.908 INFO: 
+2025-09-01 14:34:55.908 INFO: ===========TRAINING===========
+2025-09-01 14:34:55.908 INFO: Started training, reporting errors on validation set
+2025-09-01 14:34:55.908 INFO: Loss metrics on validation set
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/utils/data/dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+2025-09-01 14:34:56.232 INFO: Initial: head: Default, loss=0.01656175, MAE_E_per_atom=  249.17 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:34:59.389 INFO: Epoch 0: head: Default, loss=0.28480119, MAE_E_per_atom=  976.93 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:02.255 INFO: Epoch 1: head: Default, loss=0.04658397, MAE_E_per_atom=  429.96 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:05.159 INFO: Epoch 2: head: Default, loss=0.06750767, MAE_E_per_atom=  487.21 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:07.911 INFO: Epoch 3: head: Default, loss=0.01099903, MAE_E_per_atom=  231.31 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:10.723 INFO: Epoch 4: head: Default, loss=0.00325999, MAE_E_per_atom=  121.17 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:13.537 INFO: Epoch 5: head: Default, loss=0.01745743, MAE_E_per_atom=  246.76 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:16.329 INFO: Epoch 6: head: Default, loss=0.02126511, MAE_E_per_atom=  280.38 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:19.076 INFO: Epoch 7: head: Default, loss=0.01049512, MAE_E_per_atom=  184.21 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:21.845 INFO: Epoch 8: head: Default, loss=0.00155486, MAE_E_per_atom=   86.26 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:24.661 INFO: Epoch 9: head: Default, loss=0.00312159, MAE_E_per_atom=  123.49 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:27.380 INFO: Epoch 10: head: Default, loss=0.00837473, MAE_E_per_atom=  170.76 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:30.130 INFO: Epoch 11: head: Default, loss=0.00992347, MAE_E_per_atom=  195.28 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:32.813 INFO: Epoch 12: head: Default, loss=0.00582744, MAE_E_per_atom=  163.53 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:35.532 INFO: Epoch 13: head: Default, loss=0.00078392, MAE_E_per_atom=   59.02 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:38.279 INFO: Epoch 14: head: Default, loss=0.00090607, MAE_E_per_atom=   64.84 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:41.057 INFO: Epoch 15: head: Default, loss=0.00346026, MAE_E_per_atom=  121.41 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:43.798 INFO: Epoch 16: head: Default, loss=0.00444747, MAE_E_per_atom=  121.95 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:46.554 INFO: Epoch 17: head: Default, loss=0.00338302, MAE_E_per_atom=  116.68 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:49.288 INFO: Epoch 18: head: Default, loss=0.00115065, MAE_E_per_atom=   64.02 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:52.033 INFO: Epoch 19: head: Default, loss=0.00023136, MAE_E_per_atom=   27.13 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:54.780 INFO: Epoch 20: head: Default, loss=0.00072750, MAE_E_per_atom=   57.13 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:35:57.489 INFO: Epoch 21: head: Default, loss=0.00134253, MAE_E_per_atom=   70.55 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:00.264 INFO: Epoch 22: head: Default, loss=0.00222758, MAE_E_per_atom=   93.31 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:02.999 INFO: Epoch 23: head: Default, loss=0.00282618, MAE_E_per_atom=  111.44 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:05.748 INFO: Epoch 24: head: Default, loss=0.00248255, MAE_E_per_atom=  100.57 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:08.515 INFO: Epoch 25: head: Default, loss=0.00175529, MAE_E_per_atom=   78.56 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:11.246 INFO: Epoch 26: head: Default, loss=0.00110692, MAE_E_per_atom=   65.49 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:13.994 INFO: Epoch 27: head: Default, loss=0.00043913, MAE_E_per_atom=   40.52 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:16.719 INFO: Epoch 28: head: Default, loss=0.00014472, MAE_E_per_atom=   21.94 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:19.523 INFO: Epoch 29: head: Default, loss=0.00013435, MAE_E_per_atom=   19.63 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:22.295 INFO: Epoch 30: head: Default, loss=0.00029970, MAE_E_per_atom=   32.79 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:25.019 INFO: Epoch 31: head: Default, loss=0.00072133, MAE_E_per_atom=   57.08 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:27.721 INFO: Epoch 32: head: Default, loss=0.00076358, MAE_E_per_atom=   56.08 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:30.464 INFO: Epoch 33: head: Default, loss=0.00070553, MAE_E_per_atom=   51.15 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:33.221 INFO: Epoch 34: head: Default, loss=0.00063389, MAE_E_per_atom=   48.43 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:35.931 INFO: Epoch 35: head: Default, loss=0.00041732, MAE_E_per_atom=   39.81 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:38.653 INFO: Epoch 36: head: Default, loss=0.00030461, MAE_E_per_atom=   34.31 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:41.353 INFO: Epoch 37: head: Default, loss=0.00027595, MAE_E_per_atom=   30.43 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:44.059 INFO: Epoch 38: head: Default, loss=0.00014309, MAE_E_per_atom=   20.78 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:46.828 INFO: Epoch 39: head: Default, loss=0.00007400, MAE_E_per_atom=   18.38 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:49.656 INFO: Epoch 40: head: Default, loss=0.00011486, MAE_E_per_atom=   20.53 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:52.401 INFO: Epoch 41: head: Default, loss=0.00015028, MAE_E_per_atom=   23.31 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:55.151 INFO: Epoch 42: head: Default, loss=0.00023400, MAE_E_per_atom=   28.92 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:36:57.866 INFO: Epoch 43: head: Default, loss=0.00027642, MAE_E_per_atom=   32.51 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:00.592 INFO: Epoch 44: head: Default, loss=0.00020411, MAE_E_per_atom=   25.83 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:03.384 INFO: Epoch 45: head: Default, loss=0.00014504, MAE_E_per_atom=   22.67 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:06.104 INFO: Epoch 46: head: Default, loss=0.00011221, MAE_E_per_atom=   20.68 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:08.805 INFO: Epoch 47: head: Default, loss=0.00011075, MAE_E_per_atom=   19.32 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:11.546 INFO: Epoch 48: head: Default, loss=0.00012881, MAE_E_per_atom=   21.45 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:14.274 INFO: Epoch 49: head: Default, loss=0.00010818, MAE_E_per_atom=   18.14 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:17.019 INFO: Epoch 50: head: Default, loss=0.00008831, MAE_E_per_atom=   16.69 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:19.795 INFO: Epoch 51: head: Default, loss=0.00009987, MAE_E_per_atom=   17.79 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:22.514 INFO: Epoch 52: head: Default, loss=0.00013093, MAE_E_per_atom=   18.61 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:25.253 INFO: Epoch 53: head: Default, loss=0.00017314, MAE_E_per_atom=   23.13 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:27.995 INFO: Epoch 54: head: Default, loss=0.00019915, MAE_E_per_atom=   25.60 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:30.772 INFO: Epoch 55: head: Default, loss=0.00017671, MAE_E_per_atom=   23.58 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:33.517 INFO: Epoch 56: head: Default, loss=0.00013807, MAE_E_per_atom=   20.20 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:36.251 INFO: Epoch 57: head: Default, loss=0.00012127, MAE_E_per_atom=   18.95 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:38.980 INFO: Epoch 58: head: Default, loss=0.00012014, MAE_E_per_atom=   18.15 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:41.721 INFO: Epoch 59: head: Default, loss=0.00012653, MAE_E_per_atom=   19.09 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:41.722 INFO: Stopping optimization after 20 epochs without improvement and starting Stage Two
+2025-09-01 14:37:41.722 INFO: Changing loss based on Stage Two Weights
+2025-09-01 14:37:44.483 INFO: Epoch 226: head: Default, loss=0.08536544, MAE_E_per_atom=   17.40 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:47.247 INFO: Epoch 227: head: Default, loss=0.08729788, MAE_E_per_atom=   17.49 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:50.009 INFO: Epoch 228: head: Default, loss=0.09183221, MAE_E_per_atom=   17.53 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:52.754 INFO: Epoch 229: head: Default, loss=0.12310206, MAE_E_per_atom=   18.72 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:55.523 INFO: Epoch 230: head: Default, loss=0.11838769, MAE_E_per_atom=   17.98 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:37:58.281 INFO: Epoch 231: head: Default, loss=0.10531529, MAE_E_per_atom=   17.61 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:01.022 INFO: Epoch 232: head: Default, loss=0.12093364, MAE_E_per_atom=   18.71 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:03.761 INFO: Epoch 233: head: Default, loss=0.13731962, MAE_E_per_atom=   20.50 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:06.520 INFO: Epoch 234: head: Default, loss=0.11431318, MAE_E_per_atom=   18.15 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:09.217 INFO: Epoch 235: head: Default, loss=0.10139866, MAE_E_per_atom=   16.91 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:11.959 INFO: Epoch 236: head: Default, loss=0.12347901, MAE_E_per_atom=   19.17 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:14.718 INFO: Epoch 237: head: Default, loss=0.14996548, MAE_E_per_atom=   21.61 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:17.435 INFO: Epoch 238: head: Default, loss=0.13879521, MAE_E_per_atom=   20.58 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:20.216 INFO: Epoch 239: head: Default, loss=0.12847301, MAE_E_per_atom=   19.49 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:22.936 INFO: Epoch 240: head: Default, loss=0.12141414, MAE_E_per_atom=   18.84 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:25.642 INFO: Epoch 241: head: Default, loss=0.14172873, MAE_E_per_atom=   20.91 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:28.360 INFO: Epoch 242: head: Default, loss=0.17309547, MAE_E_per_atom=   23.04 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:31.104 INFO: Epoch 243: head: Default, loss=0.17992817, MAE_E_per_atom=   24.24 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:33.787 INFO: Epoch 244: head: Default, loss=0.14168824, MAE_E_per_atom=   21.93 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:36.573 INFO: Epoch 245: head: Default, loss=0.11312124, MAE_E_per_atom=   19.48 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:39.319 INFO: Epoch 246: head: Default, loss=0.11445545, MAE_E_per_atom=   19.41 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:39.320 INFO: Stopping optimization after 20 epochs without improvement
+2025-09-01 14:38:39.320 INFO: Training complete
+2025-09-01 14:38:39.320 INFO: 
+2025-09-01 14:38:39.320 INFO: ===========RESULTS===========
+2025-09-01 14:38:39.327 INFO: Loading checkpoint: ./checkpoints/MACE_iter000_boot001_run-123_epoch-39.pt
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/tools/checkpoint.py:187: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=checkpoint_info.path, map_location=device),
+2025-09-01 14:38:39.345 INFO: Loaded Stage one model from epoch 39 for evaluation
+2025-09-01 14:38:39.345 INFO: Saving model to checkpoints/MACE_iter000_boot001_run-123.model
+2025-09-01 14:38:39.481 INFO: Compiling model, saving metadata to MACE_iter000_boot001_compiled.model
+2025-09-01 14:38:39.996 INFO: Computing metrics for training, validation, and test sets
+2025-09-01 14:38:39.996 INFO: Skipping evaluation for heads: ['pt_head']
+2025-09-01 14:38:39.997 INFO: Evaluating train_Default ...
+2025-09-01 14:38:41.132 INFO: Evaluating valid_Default ...
+2025-09-01 14:38:41.280 INFO: Error-table on TRAIN and VALID:
++---------------+--------------------+-----------------+------------------+
+|  config_type  | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++---------------+--------------------+-----------------+------------------+
+| train_Default |          29.1      |          0.1    |       100.25     |
+| valid_Default |          18.4      |          0.1    |       100.48     |
++---------------+--------------------+-----------------+------------------+
+2025-09-01 14:38:41.280 INFO: Evaluating Default_Default ...
+2025-09-01 14:38:41.639 INFO: Error-table on TEST:
++-----------------+--------------------+-----------------+------------------+
+|   config_type   | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++-----------------+--------------------+-----------------+------------------+
+| Default_Default |         116.2      |          0.1    |       101.74     |
++-----------------+--------------------+-----------------+------------------+
+2025-09-01 14:38:42.774 INFO: Loading checkpoint: ./checkpoints/MACE_iter000_boot001_run-123_epoch-226_swa.pt
+2025-09-01 14:38:42.788 INFO: Loaded Stage two model from epoch 226 for evaluation
+2025-09-01 14:38:42.788 INFO: Saving model to checkpoints/MACE_iter000_boot001_run-123_stagetwo.model
+2025-09-01 14:38:42.923 INFO: Compiling model, saving metadata MACE_iter000_boot001_stagetwo_compiled.model
+2025-09-01 14:38:43.621 INFO: Computing metrics for training, validation, and test sets
+2025-09-01 14:38:43.621 INFO: Skipping evaluation for heads: ['pt_head']
+2025-09-01 14:38:43.621 INFO: Evaluating train_Default ...
+2025-09-01 14:38:44.757 INFO: Evaluating valid_Default ...
+2025-09-01 14:38:44.893 INFO: Error-table on TRAIN and VALID:
++---------------+--------------------+-----------------+------------------+
+|  config_type  | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++---------------+--------------------+-----------------+------------------+
+| train_Default |          27.5      |          0.1    |       100.07     |
+| valid_Default |          17.4      |          0.1    |       100.34     |
++---------------+--------------------+-----------------+------------------+
+2025-09-01 14:38:44.893 INFO: Evaluating Default_Default ...
+2025-09-01 14:38:45.246 INFO: Error-table on TEST:
++-----------------+--------------------+-----------------+------------------+
+|   config_type   | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++-----------------+--------------------+-----------------+------------------+
+| Default_Default |          64.1      |          0.0    |       101.04     |
++-----------------+--------------------+-----------------+------------------+
+2025-09-01 14:38:46.364 INFO: Done
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2025-09-01 14:38:52.299 INFO: ===========VERIFYING SETTINGS===========
+2025-09-01 14:38:52.300 INFO: MACE version: 0.3.14
+2025-09-01 14:38:52.300 INFO: Using CPU
+2025-09-01 14:38:52.364 INFO: ===========LOADING INPUT DATA===========
+2025-09-01 14:38:52.364 INFO: Using heads: ['Default']
+2025-09-01 14:38:52.364 INFO: Using the key specifications to parse data:
+2025-09-01 14:38:52.364 INFO: Default: KeySpecification(info_keys={'energy': 'REF_energy', 'stress': 'REF_stress', 'virials': 'REF_virials', 'dipole': 'dipole', 'head': 'head', 'elec_temp': 'elec_temp', 'total_charge': 'charge', 'polarizability': 'polarizability', 'total_spin': 'total_spin'}, arrays_keys={'forces': 'REF_forces', 'charges': 'REF_charges'})
+2025-09-01 14:38:52.364 INFO: =============    Processing head Default     ===========
+2025-09-01 14:38:52.383 INFO: Training set 1/1 [energy: 43, stress: 0, virials: 0, dipole components: 0, head: 43, elec_temp: 0, total_charge: 43, polarizability: 0, total_spin: 0, forces: 43, charges: 0]
+2025-09-01 14:38:52.383 INFO: Total Training set [energy: 43, stress: 0, virials: 0, dipole components: 0, head: 43, elec_temp: 0, total_charge: 43, polarizability: 0, total_spin: 0, forces: 43, charges: 0]
+2025-09-01 14:38:52.386 INFO: Validation set 1/1 [energy: 5, stress: 0, virials: 0, dipole components: 0, head: 5, elec_temp: 0, total_charge: 5, polarizability: 0, total_spin: 0, forces: 5, charges: 0]
+2025-09-01 14:38:52.386 INFO: Total Validation set [energy: 5, stress: 0, virials: 0, dipole components: 0, head: 5, elec_temp: 0, total_charge: 5, polarizability: 0, total_spin: 0, forces: 5, charges: 0]
+2025-09-01 14:38:52.391 INFO: Test set 1/1 [energy: 12, stress: 0, virials: 0, dipole components: 0, head: 12, elec_temp: 0, total_charge: 12, polarizability: 0, total_spin: 0, forces: 12, charges: 0]
+2025-09-01 14:38:52.391 INFO: Total Test set [energy: 12, stress: 0, virials: 0, dipole components: 0, head: 12, elec_temp: 0, total_charge: 12, polarizability: 0, total_spin: 0, forces: 12, charges: 0]
+2025-09-01 14:38:52.391 INFO: Total number of configurations: train=43, valid=5, tests=[Default_Default: 12],
+2025-09-01 14:38:52.391 WARNING: Validation batch size (32) is larger than the number of validation data (5)
+2025-09-01 14:38:52.391 INFO: Atomic Numbers used: [11]
+2025-09-01 14:38:52.391 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2025-09-01 14:38:52.391 INFO: Computing average Atomic Energies using least squares regression
+2025-09-01 14:38:52.392 INFO: Atomic Energies used (z: eV) for head Default: {11: -55.30416451190548}
+2025-09-01 14:38:52.392 INFO: Processing datasets for head 'Default'
+2025-09-01 14:38:52.410 INFO: Combining 1 list datasets for head 'Default'
+2025-09-01 14:38:52.411 INFO: Combining 1 list datasets for head 'Default_valid'
+2025-09-01 14:38:52.411 INFO: Combined validation datasets for Default
+2025-09-01 14:38:52.411 INFO: Head 'Default' training dataset size: 43
+2025-09-01 14:38:52.412 INFO: Computing average number of neighbors
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/utils/data/dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+2025-09-01 14:38:52.417 INFO: Average number of neighbors: 5.875
+2025-09-01 14:38:52.417 INFO: During training the following quantities will be reported: energy, forces
+2025-09-01 14:38:52.417 INFO: ===========MODEL DETAILS===========
+2025-09-01 14:38:52.421 INFO: Using embedding specifications from command line arguments
+2025-09-01 14:38:52.421 INFO: Embedding specifications: {'total_charge': {'type': 'continuous', 'per': 'graph', 'in_dim': 1, 'emb_dim': 128, 'min': -3, 'max': 3}}
+2025-09-01 14:38:52.421 INFO: Building model
+2025-09-01 14:38:52.421 INFO: Message passing with 128 channels and max_L=1 (128x0e+128x1o)
+2025-09-01 14:38:52.421 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2025-09-01 14:38:52.421 INFO: 8 radial and 5 basis functions
+2025-09-01 14:38:52.421 INFO: Radial cutoff: 9.0 A (total receptive field for each atom: 18.0 A)
+2025-09-01 14:38:52.421 INFO: Distance transform for radial basis functions: None
+2025-09-01 14:38:52.421 INFO: Hidden irreps: 128x0e+128x1o
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+2025-09-01 14:38:53.256 INFO: Total number of parameters: 591888
+2025-09-01 14:38:53.256 INFO: 
+2025-09-01 14:38:53.257 INFO: ===========OPTIMIZER INFORMATION===========
+2025-09-01 14:38:53.257 INFO: Using ADAM as parameter optimizer
+2025-09-01 14:38:53.257 INFO: Batch size: 32
+2025-09-01 14:38:53.257 INFO: Using Exponential Moving Average with decay: 0.99
+2025-09-01 14:38:53.257 INFO: Number of gradient updates: 403
+2025-09-01 14:38:53.257 INFO: Learning rate: 0.01, weight decay: 5e-07
+2025-09-01 14:38:53.257 INFO: WeightedEnergyForcesLoss(energy_weight=1.000, forces_weight=100.000)
+2025-09-01 14:38:53.257 INFO: Stage Two (after 225 epochs) with loss function: WeightedEnergyForcesLoss(energy_weight=1000.000, forces_weight=100.000), with energy weight : 1000.0, forces weight : 100.0 and learning rate : 0.001
+2025-09-01 14:38:53.315 INFO: Using gradient clipping with tolerance=10.000
+2025-09-01 14:38:53.315 INFO: 
+2025-09-01 14:38:53.315 INFO: ===========TRAINING===========
+2025-09-01 14:38:53.315 INFO: Started training, reporting errors on validation set
+2025-09-01 14:38:53.315 INFO: Loss metrics on validation set
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/utils/data/dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+2025-09-01 14:38:53.550 INFO: Initial: head: Default, loss=0.03696908, MAE_E_per_atom=  371.55 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:56.692 INFO: Epoch 0: head: Default, loss=0.20451778, MAE_E_per_atom=  962.50 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:38:59.587 INFO: Epoch 1: head: Default, loss=0.11336960, MAE_E_per_atom=  751.03 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:02.471 INFO: Epoch 2: head: Default, loss=0.10294013, MAE_E_per_atom=  693.92 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:05.280 INFO: Epoch 3: head: Default, loss=0.01919412, MAE_E_per_atom=  283.15 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:08.116 INFO: Epoch 4: head: Default, loss=0.01238400, MAE_E_per_atom=  184.15 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:10.871 INFO: Epoch 5: head: Default, loss=0.01775628, MAE_E_per_atom=  297.27 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:13.653 INFO: Epoch 6: head: Default, loss=0.01346332, MAE_E_per_atom=  207.85 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:16.466 INFO: Epoch 7: head: Default, loss=0.01173693, MAE_E_per_atom=  240.39 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:19.335 INFO: Epoch 8: head: Default, loss=0.00650314, MAE_E_per_atom=  139.56 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:22.141 INFO: Epoch 9: head: Default, loss=0.00219381, MAE_E_per_atom=  103.17 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:24.989 INFO: Epoch 10: head: Default, loss=0.00568496, MAE_E_per_atom=  161.11 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:27.738 INFO: Epoch 11: head: Default, loss=0.01150509, MAE_E_per_atom=  239.16 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:30.517 INFO: Epoch 12: head: Default, loss=0.01288238, MAE_E_per_atom=  252.84 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:33.264 INFO: Epoch 13: head: Default, loss=0.00948880, MAE_E_per_atom=  216.91 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:36.038 INFO: Epoch 14: head: Default, loss=0.00485211, MAE_E_per_atom=  148.67 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:38.853 INFO: Epoch 15: head: Default, loss=0.00180302, MAE_E_per_atom=   79.03 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:41.647 INFO: Epoch 16: head: Default, loss=0.00091692, MAE_E_per_atom=   58.04 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:44.450 INFO: Epoch 17: head: Default, loss=0.00147553, MAE_E_per_atom=   80.54 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:47.223 INFO: Epoch 18: head: Default, loss=0.00276127, MAE_E_per_atom=  113.91 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:49.978 INFO: Epoch 19: head: Default, loss=0.00332911, MAE_E_per_atom=  118.83 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:52.744 INFO: Epoch 20: head: Default, loss=0.00241253, MAE_E_per_atom=  101.33 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:55.456 INFO: Epoch 21: head: Default, loss=0.00106662, MAE_E_per_atom=   70.56 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:39:58.231 INFO: Epoch 22: head: Default, loss=0.00051176, MAE_E_per_atom=   38.80 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:01.041 INFO: Epoch 23: head: Default, loss=0.00073938, MAE_E_per_atom=   56.82 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:03.762 INFO: Epoch 24: head: Default, loss=0.00111114, MAE_E_per_atom=   70.59 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:06.600 INFO: Epoch 25: head: Default, loss=0.00125954, MAE_E_per_atom=   66.77 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:09.355 INFO: Epoch 26: head: Default, loss=0.00122609, MAE_E_per_atom=   66.15 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:12.072 INFO: Epoch 27: head: Default, loss=0.00104022, MAE_E_per_atom=   63.42 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:14.888 INFO: Epoch 28: head: Default, loss=0.00072367, MAE_E_per_atom=   53.12 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:17.677 INFO: Epoch 29: head: Default, loss=0.00039096, MAE_E_per_atom=   38.49 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:20.554 INFO: Epoch 30: head: Default, loss=0.00020376, MAE_E_per_atom=   25.87 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:23.385 INFO: Epoch 31: head: Default, loss=0.00016498, MAE_E_per_atom=   24.36 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:26.214 INFO: Epoch 32: head: Default, loss=0.00019920, MAE_E_per_atom=   25.02 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:29.013 INFO: Epoch 33: head: Default, loss=0.00028260, MAE_E_per_atom=   31.71 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:31.801 INFO: Epoch 34: head: Default, loss=0.00036531, MAE_E_per_atom=   36.59 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:34.584 INFO: Epoch 35: head: Default, loss=0.00036724, MAE_E_per_atom=   36.87 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:37.395 INFO: Epoch 36: head: Default, loss=0.00034061, MAE_E_per_atom=   37.11 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:40.171 INFO: Epoch 37: head: Default, loss=0.00031521, MAE_E_per_atom=   33.13 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:42.921 INFO: Epoch 38: head: Default, loss=0.00024624, MAE_E_per_atom=   27.84 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:45.700 INFO: Epoch 39: head: Default, loss=0.00014694, MAE_E_per_atom=   22.58 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:48.537 INFO: Epoch 40: head: Default, loss=0.00009748, MAE_E_per_atom=   19.00 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:51.340 INFO: Epoch 41: head: Default, loss=0.00011197, MAE_E_per_atom=   20.54 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:54.130 INFO: Epoch 42: head: Default, loss=0.00015628, MAE_E_per_atom=   22.21 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:56.892 INFO: Epoch 43: head: Default, loss=0.00022164, MAE_E_per_atom=   27.97 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:40:59.710 INFO: Epoch 44: head: Default, loss=0.00024148, MAE_E_per_atom=   29.37 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:02.498 INFO: Epoch 45: head: Default, loss=0.00017163, MAE_E_per_atom=   24.46 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:05.317 INFO: Epoch 46: head: Default, loss=0.00010100, MAE_E_per_atom=   18.82 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:08.118 INFO: Epoch 47: head: Default, loss=0.00008188, MAE_E_per_atom=   17.12 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:10.978 INFO: Epoch 48: head: Default, loss=0.00010683, MAE_E_per_atom=   17.32 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:13.747 INFO: Epoch 49: head: Default, loss=0.00017540, MAE_E_per_atom=   23.44 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:16.528 INFO: Epoch 50: head: Default, loss=0.00022364, MAE_E_per_atom=   26.64 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:19.288 INFO: Epoch 51: head: Default, loss=0.00019046, MAE_E_per_atom=   24.58 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:22.077 INFO: Epoch 52: head: Default, loss=0.00013477, MAE_E_per_atom=   20.11 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:24.841 INFO: Epoch 53: head: Default, loss=0.00010224, MAE_E_per_atom=   16.74 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:27.630 INFO: Epoch 54: head: Default, loss=0.00010256, MAE_E_per_atom=   16.97 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:30.422 INFO: Epoch 55: head: Default, loss=0.00014255, MAE_E_per_atom=   22.23 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:33.238 INFO: Epoch 56: head: Default, loss=0.00018368, MAE_E_per_atom=   25.84 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:36.051 INFO: Epoch 57: head: Default, loss=0.00016099, MAE_E_per_atom=   24.37 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:38.861 INFO: Epoch 58: head: Default, loss=0.00011246, MAE_E_per_atom=   19.93 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:41.616 INFO: Epoch 59: head: Default, loss=0.00008597, MAE_E_per_atom=   18.32 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:44.413 INFO: Epoch 60: head: Default, loss=0.00008267, MAE_E_per_atom=   18.07 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:47.151 INFO: Epoch 61: head: Default, loss=0.00010688, MAE_E_per_atom=   19.29 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:49.957 INFO: Epoch 62: head: Default, loss=0.00014763, MAE_E_per_atom=   23.02 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:52.773 INFO: Epoch 63: head: Default, loss=0.00014963, MAE_E_per_atom=   22.83 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:55.580 INFO: Epoch 64: head: Default, loss=0.00011675, MAE_E_per_atom=   19.33 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:41:58.333 INFO: Epoch 65: head: Default, loss=0.00009655, MAE_E_per_atom=   16.33 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:01.115 INFO: Epoch 66: head: Default, loss=0.00010267, MAE_E_per_atom=   16.88 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:03.921 INFO: Epoch 67: head: Default, loss=0.00012929, MAE_E_per_atom=   19.93 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:03.922 INFO: Stopping optimization after 20 epochs without improvement and starting Stage Two
+2025-09-01 14:42:03.922 INFO: Changing loss based on Stage Two Weights
+2025-09-01 14:42:06.681 INFO: Epoch 226: head: Default, loss=0.08843291, MAE_E_per_atom=   15.94 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:09.514 INFO: Epoch 227: head: Default, loss=0.07303979, MAE_E_per_atom=   16.14 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:12.320 INFO: Epoch 228: head: Default, loss=0.07802850, MAE_E_per_atom=   15.82 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:15.130 INFO: Epoch 229: head: Default, loss=0.08507063, MAE_E_per_atom=   16.11 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:17.936 INFO: Epoch 230: head: Default, loss=0.07365973, MAE_E_per_atom=   15.91 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:20.749 INFO: Epoch 231: head: Default, loss=0.07115449, MAE_E_per_atom=   16.08 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:23.588 INFO: Epoch 232: head: Default, loss=0.07951899, MAE_E_per_atom=   16.19 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:26.361 INFO: Epoch 233: head: Default, loss=0.08904947, MAE_E_per_atom=   16.20 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:29.128 INFO: Epoch 234: head: Default, loss=0.07812402, MAE_E_per_atom=   15.96 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:31.915 INFO: Epoch 235: head: Default, loss=0.06973735, MAE_E_per_atom=   16.28 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:34.753 INFO: Epoch 236: head: Default, loss=0.07501777, MAE_E_per_atom=   17.17 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:37.488 INFO: Epoch 237: head: Default, loss=0.08885381, MAE_E_per_atom=   17.70 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:40.320 INFO: Epoch 238: head: Default, loss=0.09143226, MAE_E_per_atom=   17.62 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:43.113 INFO: Epoch 239: head: Default, loss=0.07256004, MAE_E_per_atom=   16.81 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:45.889 INFO: Epoch 240: head: Default, loss=0.06787374, MAE_E_per_atom=   15.91 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:48.697 INFO: Epoch 241: head: Default, loss=0.07849055, MAE_E_per_atom=   16.90 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:51.376 INFO: Epoch 242: head: Default, loss=0.08619510, MAE_E_per_atom=   17.52 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:54.155 INFO: Epoch 243: head: Default, loss=0.09155613, MAE_E_per_atom=   17.43 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:56.970 INFO: Epoch 244: head: Default, loss=0.11774584, MAE_E_per_atom=   18.57 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:42:59.705 INFO: Epoch 245: head: Default, loss=0.15244426, MAE_E_per_atom=   21.63 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:43:02.459 INFO: Epoch 246: head: Default, loss=0.16038334, MAE_E_per_atom=   22.84 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:43:05.166 INFO: Epoch 247: head: Default, loss=0.12444567, MAE_E_per_atom=   20.48 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:43:07.933 INFO: Epoch 248: head: Default, loss=0.09009434, MAE_E_per_atom=   17.12 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:43:10.736 INFO: Epoch 249: head: Default, loss=0.07398885, MAE_E_per_atom=   17.24 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:43:13.440 INFO: Epoch 250: head: Default, loss=0.07223746, MAE_E_per_atom=   17.37 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:43:16.193 INFO: Epoch 251: head: Default, loss=0.08750822, MAE_E_per_atom=   17.40 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:43:19.003 INFO: Epoch 252: head: Default, loss=0.12266310, MAE_E_per_atom=   20.65 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:43:21.792 INFO: Epoch 253: head: Default, loss=0.16522478, MAE_E_per_atom=   23.78 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:43:24.589 INFO: Epoch 254: head: Default, loss=0.18686176, MAE_E_per_atom=   24.61 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:43:27.377 INFO: Epoch 255: head: Default, loss=0.16511119, MAE_E_per_atom=   22.55 meV, MAE_F=    0.15 meV / A
+2025-09-01 14:43:30.155 INFO: Epoch 256: head: Default, loss=0.13238784, MAE_E_per_atom=   20.08 meV, MAE_F=    0.15 meV / A
+2025-09-01 14:43:32.981 INFO: Epoch 257: head: Default, loss=0.10846253, MAE_E_per_atom=   17.46 meV, MAE_F=    0.15 meV / A
+2025-09-01 14:43:35.729 INFO: Epoch 258: head: Default, loss=0.09608380, MAE_E_per_atom=   16.81 meV, MAE_F=    0.15 meV / A
+2025-09-01 14:43:38.446 INFO: Epoch 259: head: Default, loss=0.09539687, MAE_E_per_atom=   16.31 meV, MAE_F=    0.15 meV / A
+2025-09-01 14:43:41.212 INFO: Epoch 260: head: Default, loss=0.10920992, MAE_E_per_atom=   17.64 meV, MAE_F=    0.15 meV / A
+2025-09-01 14:43:41.213 INFO: Stopping optimization after 20 epochs without improvement
+2025-09-01 14:43:41.213 INFO: Training complete
+2025-09-01 14:43:41.213 INFO: 
+2025-09-01 14:43:41.213 INFO: ===========RESULTS===========
+2025-09-01 14:43:41.219 INFO: Loading checkpoint: ./checkpoints/MACE_iter000_boot002_run-123_epoch-47.pt
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/tools/checkpoint.py:187: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=checkpoint_info.path, map_location=device),
+2025-09-01 14:43:41.235 INFO: Loaded Stage one model from epoch 47 for evaluation
+2025-09-01 14:43:41.235 INFO: Saving model to checkpoints/MACE_iter000_boot002_run-123.model
+2025-09-01 14:43:41.375 INFO: Compiling model, saving metadata to MACE_iter000_boot002_compiled.model
+2025-09-01 14:43:41.870 INFO: Computing metrics for training, validation, and test sets
+2025-09-01 14:43:41.871 INFO: Skipping evaluation for heads: ['pt_head']
+2025-09-01 14:43:41.871 INFO: Evaluating train_Default ...
+2025-09-01 14:43:43.015 INFO: Evaluating valid_Default ...
+2025-09-01 14:43:43.148 INFO: Error-table on TRAIN and VALID:
++---------------+--------------------+-----------------+------------------+
+|  config_type  | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++---------------+--------------------+-----------------+------------------+
+| train_Default |          33.7      |          0.1    |       101.72     |
+| valid_Default |          17.1      |          0.1    |       101.99     |
++---------------+--------------------+-----------------+------------------+
+2025-09-01 14:43:43.148 INFO: Evaluating Default_Default ...
+2025-09-01 14:43:43.499 INFO: Error-table on TEST:
++-----------------+--------------------+-----------------+------------------+
+|   config_type   | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++-----------------+--------------------+-----------------+------------------+
+| Default_Default |          52.0      |          0.1    |       114.19     |
++-----------------+--------------------+-----------------+------------------+
+2025-09-01 14:43:44.647 INFO: Loading checkpoint: ./checkpoints/MACE_iter000_boot002_run-123_epoch-240_swa.pt
+2025-09-01 14:43:44.662 INFO: Loaded Stage two model from epoch 240 for evaluation
+2025-09-01 14:43:44.662 INFO: Saving model to checkpoints/MACE_iter000_boot002_run-123_stagetwo.model
+2025-09-01 14:43:44.807 INFO: Compiling model, saving metadata MACE_iter000_boot002_stagetwo_compiled.model
+2025-09-01 14:43:45.430 INFO: Computing metrics for training, validation, and test sets
+2025-09-01 14:43:45.431 INFO: Skipping evaluation for heads: ['pt_head']
+2025-09-01 14:43:45.431 INFO: Evaluating train_Default ...
+2025-09-01 14:43:46.579 INFO: Evaluating valid_Default ...
+2025-09-01 14:43:46.710 INFO: Error-table on TRAIN and VALID:
++---------------+--------------------+-----------------+------------------+
+|  config_type  | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++---------------+--------------------+-----------------+------------------+
+| train_Default |          31.5      |          0.1    |       103.38     |
+| valid_Default |          15.9      |          0.1    |       103.06     |
++---------------+--------------------+-----------------+------------------+
+2025-09-01 14:43:46.710 INFO: Evaluating Default_Default ...
+2025-09-01 14:43:47.060 INFO: Error-table on TEST:
++-----------------+--------------------+-----------------+------------------+
+|   config_type   | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++-----------------+--------------------+-----------------+------------------+
+| Default_Default |          66.9      |          0.1    |       123.26     |
++-----------------+--------------------+-----------------+------------------+
+2025-09-01 14:43:48.202 INFO: Done
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2025-09-01 14:43:53.549 INFO: ===========VERIFYING SETTINGS===========
+2025-09-01 14:43:53.550 INFO: MACE version: 0.3.14
+2025-09-01 14:43:53.550 INFO: Using CPU
+2025-09-01 14:43:53.616 INFO: ===========LOADING INPUT DATA===========
+2025-09-01 14:43:53.616 INFO: Using heads: ['Default']
+2025-09-01 14:43:53.616 INFO: Using the key specifications to parse data:
+2025-09-01 14:43:53.616 INFO: Default: KeySpecification(info_keys={'energy': 'REF_energy', 'stress': 'REF_stress', 'virials': 'REF_virials', 'dipole': 'dipole', 'head': 'head', 'elec_temp': 'elec_temp', 'total_charge': 'charge', 'polarizability': 'polarizability', 'total_spin': 'total_spin'}, arrays_keys={'forces': 'REF_forces', 'charges': 'REF_charges'})
+2025-09-01 14:43:53.616 INFO: =============    Processing head Default     ===========
+2025-09-01 14:43:53.635 INFO: Training set 1/1 [energy: 43, stress: 0, virials: 0, dipole components: 0, head: 43, elec_temp: 0, total_charge: 43, polarizability: 0, total_spin: 0, forces: 43, charges: 0]
+2025-09-01 14:43:53.636 INFO: Total Training set [energy: 43, stress: 0, virials: 0, dipole components: 0, head: 43, elec_temp: 0, total_charge: 43, polarizability: 0, total_spin: 0, forces: 43, charges: 0]
+2025-09-01 14:43:53.638 INFO: Validation set 1/1 [energy: 5, stress: 0, virials: 0, dipole components: 0, head: 5, elec_temp: 0, total_charge: 5, polarizability: 0, total_spin: 0, forces: 5, charges: 0]
+2025-09-01 14:43:53.638 INFO: Total Validation set [energy: 5, stress: 0, virials: 0, dipole components: 0, head: 5, elec_temp: 0, total_charge: 5, polarizability: 0, total_spin: 0, forces: 5, charges: 0]
+2025-09-01 14:43:53.643 INFO: Test set 1/1 [energy: 12, stress: 0, virials: 0, dipole components: 0, head: 12, elec_temp: 0, total_charge: 12, polarizability: 0, total_spin: 0, forces: 12, charges: 0]
+2025-09-01 14:43:53.643 INFO: Total Test set [energy: 12, stress: 0, virials: 0, dipole components: 0, head: 12, elec_temp: 0, total_charge: 12, polarizability: 0, total_spin: 0, forces: 12, charges: 0]
+2025-09-01 14:43:53.643 INFO: Total number of configurations: train=43, valid=5, tests=[Default_Default: 12],
+2025-09-01 14:43:53.643 WARNING: Validation batch size (32) is larger than the number of validation data (5)
+2025-09-01 14:43:53.644 INFO: Atomic Numbers used: [11]
+2025-09-01 14:43:53.644 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2025-09-01 14:43:53.644 INFO: Computing average Atomic Energies using least squares regression
+2025-09-01 14:43:53.644 INFO: Atomic Energies used (z: eV) for head Default: {11: -55.49475514594034}
+2025-09-01 14:43:53.644 INFO: Processing datasets for head 'Default'
+2025-09-01 14:43:53.664 INFO: Combining 1 list datasets for head 'Default'
+2025-09-01 14:43:53.666 INFO: Combining 1 list datasets for head 'Default_valid'
+2025-09-01 14:43:53.666 INFO: Combined validation datasets for Default
+2025-09-01 14:43:53.666 INFO: Head 'Default' training dataset size: 43
+2025-09-01 14:43:53.666 INFO: Computing average number of neighbors
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/utils/data/dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+2025-09-01 14:43:53.672 INFO: Average number of neighbors: 5.8671875
+2025-09-01 14:43:53.672 INFO: During training the following quantities will be reported: energy, forces
+2025-09-01 14:43:53.672 INFO: ===========MODEL DETAILS===========
+2025-09-01 14:43:53.676 INFO: Using embedding specifications from command line arguments
+2025-09-01 14:43:53.676 INFO: Embedding specifications: {'total_charge': {'type': 'continuous', 'per': 'graph', 'in_dim': 1, 'emb_dim': 128, 'min': -3, 'max': 3}}
+2025-09-01 14:43:53.676 INFO: Building model
+2025-09-01 14:43:53.676 INFO: Message passing with 128 channels and max_L=1 (128x0e+128x1o)
+2025-09-01 14:43:53.676 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2025-09-01 14:43:53.676 INFO: 8 radial and 5 basis functions
+2025-09-01 14:43:53.676 INFO: Radial cutoff: 9.0 A (total receptive field for each atom: 18.0 A)
+2025-09-01 14:43:53.677 INFO: Distance transform for radial basis functions: None
+2025-09-01 14:43:53.677 INFO: Hidden irreps: 128x0e+128x1o
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+2025-09-01 14:43:54.521 INFO: Total number of parameters: 591888
+2025-09-01 14:43:54.522 INFO: 
+2025-09-01 14:43:54.522 INFO: ===========OPTIMIZER INFORMATION===========
+2025-09-01 14:43:54.522 INFO: Using ADAM as parameter optimizer
+2025-09-01 14:43:54.522 INFO: Batch size: 32
+2025-09-01 14:43:54.522 INFO: Using Exponential Moving Average with decay: 0.99
+2025-09-01 14:43:54.522 INFO: Number of gradient updates: 403
+2025-09-01 14:43:54.522 INFO: Learning rate: 0.01, weight decay: 5e-07
+2025-09-01 14:43:54.522 INFO: WeightedEnergyForcesLoss(energy_weight=1.000, forces_weight=100.000)
+2025-09-01 14:43:54.522 INFO: Stage Two (after 225 epochs) with loss function: WeightedEnergyForcesLoss(energy_weight=1000.000, forces_weight=100.000), with energy weight : 1000.0, forces weight : 100.0 and learning rate : 0.001
+2025-09-01 14:43:54.581 INFO: Using gradient clipping with tolerance=10.000
+2025-09-01 14:43:54.582 INFO: 
+2025-09-01 14:43:54.582 INFO: ===========TRAINING===========
+2025-09-01 14:43:54.582 INFO: Started training, reporting errors on validation set
+2025-09-01 14:43:54.582 INFO: Loss metrics on validation set
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/utils/data/dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+2025-09-01 14:43:54.812 INFO: Initial: head: Default, loss=0.01590859, MAE_E_per_atom=  247.41 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:43:57.921 INFO: Epoch 0: head: Default, loss=0.28850260, MAE_E_per_atom=  984.34 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:00.816 INFO: Epoch 1: head: Default, loss=0.04603256, MAE_E_per_atom=  435.36 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:03.699 INFO: Epoch 2: head: Default, loss=0.06876846, MAE_E_per_atom=  483.36 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:06.410 INFO: Epoch 3: head: Default, loss=0.01137265, MAE_E_per_atom=  231.61 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:09.207 INFO: Epoch 4: head: Default, loss=0.00304209, MAE_E_per_atom=  120.67 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:12.053 INFO: Epoch 5: head: Default, loss=0.01617699, MAE_E_per_atom=  227.13 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:14.857 INFO: Epoch 6: head: Default, loss=0.02018890, MAE_E_per_atom=  266.07 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:17.628 INFO: Epoch 7: head: Default, loss=0.00998055, MAE_E_per_atom=  179.78 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:20.366 INFO: Epoch 8: head: Default, loss=0.00106426, MAE_E_per_atom=   70.66 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:23.178 INFO: Epoch 9: head: Default, loss=0.00325867, MAE_E_per_atom=  124.58 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:25.986 INFO: Epoch 10: head: Default, loss=0.00879468, MAE_E_per_atom=  171.68 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:28.739 INFO: Epoch 11: head: Default, loss=0.00960924, MAE_E_per_atom=  191.78 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:31.551 INFO: Epoch 12: head: Default, loss=0.00480888, MAE_E_per_atom=  144.62 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:34.339 INFO: Epoch 13: head: Default, loss=0.00038317, MAE_E_per_atom=   38.09 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:37.211 INFO: Epoch 14: head: Default, loss=0.00105103, MAE_E_per_atom=   68.48 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:40.007 INFO: Epoch 15: head: Default, loss=0.00338611, MAE_E_per_atom=  115.53 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:42.770 INFO: Epoch 16: head: Default, loss=0.00375227, MAE_E_per_atom=  112.53 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:45.544 INFO: Epoch 17: head: Default, loss=0.00217563, MAE_E_per_atom=   88.41 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:48.349 INFO: Epoch 18: head: Default, loss=0.00046083, MAE_E_per_atom=   41.80 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:51.063 INFO: Epoch 19: head: Default, loss=0.00022671, MAE_E_per_atom=   28.60 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:53.875 INFO: Epoch 20: head: Default, loss=0.00101143, MAE_E_per_atom=   66.29 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:56.633 INFO: Epoch 21: head: Default, loss=0.00187753, MAE_E_per_atom=   81.03 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:44:59.405 INFO: Epoch 22: head: Default, loss=0.00258310, MAE_E_per_atom=   94.00 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:02.169 INFO: Epoch 23: head: Default, loss=0.00268596, MAE_E_per_atom=   96.03 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:04.928 INFO: Epoch 24: head: Default, loss=0.00232268, MAE_E_per_atom=   90.76 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:07.691 INFO: Epoch 25: head: Default, loss=0.00159967, MAE_E_per_atom=   75.22 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:10.471 INFO: Epoch 26: head: Default, loss=0.00083260, MAE_E_per_atom=   55.35 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:13.243 INFO: Epoch 27: head: Default, loss=0.00030602, MAE_E_per_atom=   34.21 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:15.957 INFO: Epoch 28: head: Default, loss=0.00009342, MAE_E_per_atom=   18.88 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:18.763 INFO: Epoch 29: head: Default, loss=0.00013080, MAE_E_per_atom=   19.01 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:21.567 INFO: Epoch 30: head: Default, loss=0.00027215, MAE_E_per_atom=   32.16 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:24.351 INFO: Epoch 31: head: Default, loss=0.00040811, MAE_E_per_atom=   39.38 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:27.140 INFO: Epoch 32: head: Default, loss=0.00045172, MAE_E_per_atom=   40.67 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:29.932 INFO: Epoch 33: head: Default, loss=0.00037094, MAE_E_per_atom=   37.16 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:32.727 INFO: Epoch 34: head: Default, loss=0.00023927, MAE_E_per_atom=   30.17 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:35.516 INFO: Epoch 35: head: Default, loss=0.00013020, MAE_E_per_atom=   21.11 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:38.285 INFO: Epoch 36: head: Default, loss=0.00008029, MAE_E_per_atom=   16.18 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:41.127 INFO: Epoch 37: head: Default, loss=0.00007689, MAE_E_per_atom=   18.53 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:43.982 INFO: Epoch 38: head: Default, loss=0.00012337, MAE_E_per_atom=   21.17 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:46.733 INFO: Epoch 39: head: Default, loss=0.00019323, MAE_E_per_atom=   26.46 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:49.534 INFO: Epoch 40: head: Default, loss=0.00024347, MAE_E_per_atom=   30.18 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:52.338 INFO: Epoch 41: head: Default, loss=0.00026207, MAE_E_per_atom=   31.59 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:55.097 INFO: Epoch 42: head: Default, loss=0.00025323, MAE_E_per_atom=   30.93 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:45:57.847 INFO: Epoch 43: head: Default, loss=0.00022074, MAE_E_per_atom=   28.44 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:00.621 INFO: Epoch 44: head: Default, loss=0.00017099, MAE_E_per_atom=   24.57 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:03.399 INFO: Epoch 45: head: Default, loss=0.00012080, MAE_E_per_atom=   20.97 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:06.145 INFO: Epoch 46: head: Default, loss=0.00008834, MAE_E_per_atom=   19.30 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:08.848 INFO: Epoch 47: head: Default, loss=0.00007583, MAE_E_per_atom=   17.70 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:11.693 INFO: Epoch 48: head: Default, loss=0.00007177, MAE_E_per_atom=   16.28 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:14.471 INFO: Epoch 49: head: Default, loss=0.00008003, MAE_E_per_atom=   16.49 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:17.252 INFO: Epoch 50: head: Default, loss=0.00008867, MAE_E_per_atom=   17.23 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:20.037 INFO: Epoch 51: head: Default, loss=0.00009261, MAE_E_per_atom=   17.58 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:22.744 INFO: Epoch 52: head: Default, loss=0.00009411, MAE_E_per_atom=   17.56 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:25.544 INFO: Epoch 53: head: Default, loss=0.00009104, MAE_E_per_atom=   17.23 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:28.292 INFO: Epoch 54: head: Default, loss=0.00008323, MAE_E_per_atom=   16.66 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:31.050 INFO: Epoch 55: head: Default, loss=0.00007491, MAE_E_per_atom=   15.92 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:33.840 INFO: Epoch 56: head: Default, loss=0.00007177, MAE_E_per_atom=   16.51 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:36.618 INFO: Epoch 57: head: Default, loss=0.00007320, MAE_E_per_atom=   17.25 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:39.394 INFO: Epoch 58: head: Default, loss=0.00007429, MAE_E_per_atom=   17.90 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:42.171 INFO: Epoch 59: head: Default, loss=0.00007780, MAE_E_per_atom=   18.41 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:44.947 INFO: Epoch 60: head: Default, loss=0.00008249, MAE_E_per_atom=   18.76 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:47.707 INFO: Epoch 61: head: Default, loss=0.00008340, MAE_E_per_atom=   18.93 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:50.485 INFO: Epoch 62: head: Default, loss=0.00008589, MAE_E_per_atom=   18.94 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:53.250 INFO: Epoch 63: head: Default, loss=0.00008680, MAE_E_per_atom=   18.82 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:56.036 INFO: Epoch 64: head: Default, loss=0.00008245, MAE_E_per_atom=   18.58 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:46:58.820 INFO: Epoch 65: head: Default, loss=0.00007430, MAE_E_per_atom=   18.23 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:01.595 INFO: Epoch 66: head: Default, loss=0.00007567, MAE_E_per_atom=   17.83 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:04.345 INFO: Epoch 67: head: Default, loss=0.00007389, MAE_E_per_atom=   17.40 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:07.133 INFO: Epoch 68: head: Default, loss=0.00006815, MAE_E_per_atom=   17.01 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:09.971 INFO: Epoch 69: head: Default, loss=0.00007409, MAE_E_per_atom=   16.70 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:12.713 INFO: Epoch 70: head: Default, loss=0.00007085, MAE_E_per_atom=   16.46 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:15.493 INFO: Epoch 71: head: Default, loss=0.00006880, MAE_E_per_atom=   16.32 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:18.269 INFO: Epoch 72: head: Default, loss=0.00007229, MAE_E_per_atom=   16.29 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:21.011 INFO: Epoch 73: head: Default, loss=0.00007035, MAE_E_per_atom=   16.34 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:23.756 INFO: Epoch 74: head: Default, loss=0.00006951, MAE_E_per_atom=   16.47 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:26.501 INFO: Epoch 75: head: Default, loss=0.00006794, MAE_E_per_atom=   16.64 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:29.340 INFO: Epoch 76: head: Default, loss=0.00006868, MAE_E_per_atom=   16.82 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:32.024 INFO: Epoch 77: head: Default, loss=0.00006864, MAE_E_per_atom=   17.00 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:34.776 INFO: Epoch 78: head: Default, loss=0.00006844, MAE_E_per_atom=   17.17 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:37.547 INFO: Epoch 79: head: Default, loss=0.00006995, MAE_E_per_atom=   17.31 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:40.331 INFO: Epoch 80: head: Default, loss=0.00007029, MAE_E_per_atom=   17.40 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:43.106 INFO: Epoch 81: head: Default, loss=0.00007212, MAE_E_per_atom=   17.44 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:45.874 INFO: Epoch 82: head: Default, loss=0.00006923, MAE_E_per_atom=   17.44 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:48.636 INFO: Epoch 83: head: Default, loss=0.00007106, MAE_E_per_atom=   17.40 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:51.405 INFO: Epoch 84: head: Default, loss=0.00007246, MAE_E_per_atom=   17.32 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:54.170 INFO: Epoch 85: head: Default, loss=0.00006903, MAE_E_per_atom=   17.23 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:56.973 INFO: Epoch 86: head: Default, loss=0.00006977, MAE_E_per_atom=   17.11 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:47:59.682 INFO: Epoch 87: head: Default, loss=0.00006982, MAE_E_per_atom=   17.00 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:02.430 INFO: Epoch 88: head: Default, loss=0.00006885, MAE_E_per_atom=   16.90 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:05.184 INFO: Epoch 89: head: Default, loss=0.00006829, MAE_E_per_atom=   16.83 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:07.978 INFO: Epoch 90: head: Default, loss=0.00006899, MAE_E_per_atom=   16.79 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:10.710 INFO: Epoch 91: head: Default, loss=0.00007019, MAE_E_per_atom=   16.80 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:13.514 INFO: Epoch 92: head: Default, loss=0.00006964, MAE_E_per_atom=   16.83 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:16.313 INFO: Epoch 93: head: Default, loss=0.00006848, MAE_E_per_atom=   16.89 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:19.066 INFO: Epoch 94: head: Default, loss=0.00007141, MAE_E_per_atom=   16.97 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:21.847 INFO: Epoch 95: head: Default, loss=0.00007133, MAE_E_per_atom=   17.07 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:21.847 INFO: Stopping optimization after 20 epochs without improvement and starting Stage Two
+2025-09-01 14:48:21.847 INFO: Changing loss based on Stage Two Weights
+2025-09-01 14:48:24.628 INFO: Epoch 226: head: Default, loss=0.13327855, MAE_E_per_atom=   21.07 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:27.460 INFO: Epoch 227: head: Default, loss=0.14225153, MAE_E_per_atom=   20.84 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:30.241 INFO: Epoch 228: head: Default, loss=0.07254177, MAE_E_per_atom=   16.49 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:33.066 INFO: Epoch 229: head: Default, loss=0.16357845, MAE_E_per_atom=   22.69 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:35.873 INFO: Epoch 230: head: Default, loss=0.29033682, MAE_E_per_atom=   30.32 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:38.651 INFO: Epoch 231: head: Default, loss=0.23345086, MAE_E_per_atom=   27.30 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:41.438 INFO: Epoch 232: head: Default, loss=0.14620089, MAE_E_per_atom=   21.29 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:44.179 INFO: Epoch 233: head: Default, loss=0.11392264, MAE_E_per_atom=   18.16 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:46.929 INFO: Epoch 234: head: Default, loss=0.14727347, MAE_E_per_atom=   21.83 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:49.704 INFO: Epoch 235: head: Default, loss=0.18498816, MAE_E_per_atom=   25.05 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:52.480 INFO: Epoch 236: head: Default, loss=0.15493627, MAE_E_per_atom=   23.32 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:55.209 INFO: Epoch 237: head: Default, loss=0.11012670, MAE_E_per_atom=   19.46 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:48:58.007 INFO: Epoch 238: head: Default, loss=0.09690122, MAE_E_per_atom=   17.76 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:00.777 INFO: Epoch 239: head: Default, loss=0.11128903, MAE_E_per_atom=   19.13 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:03.551 INFO: Epoch 240: head: Default, loss=0.11888815, MAE_E_per_atom=   19.70 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:06.286 INFO: Epoch 241: head: Default, loss=0.09105589, MAE_E_per_atom=   16.61 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:09.062 INFO: Epoch 242: head: Default, loss=0.07413571, MAE_E_per_atom=   16.67 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:11.857 INFO: Epoch 243: head: Default, loss=0.07612038, MAE_E_per_atom=   16.75 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:14.669 INFO: Epoch 244: head: Default, loss=0.07561555, MAE_E_per_atom=   16.80 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:17.447 INFO: Epoch 245: head: Default, loss=0.06516309, MAE_E_per_atom=   16.82 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:20.224 INFO: Epoch 246: head: Default, loss=0.06655132, MAE_E_per_atom=   16.75 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:23.012 INFO: Epoch 247: head: Default, loss=0.06785334, MAE_E_per_atom=   16.59 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:25.798 INFO: Epoch 248: head: Default, loss=0.06460561, MAE_E_per_atom=   16.54 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:28.611 INFO: Epoch 249: head: Default, loss=0.06939093, MAE_E_per_atom=   16.61 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:31.363 INFO: Epoch 250: head: Default, loss=0.07125074, MAE_E_per_atom=   16.83 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:34.091 INFO: Epoch 251: head: Default, loss=0.06473193, MAE_E_per_atom=   17.16 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:36.797 INFO: Epoch 252: head: Default, loss=0.07843962, MAE_E_per_atom=   17.50 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:39.577 INFO: Epoch 253: head: Default, loss=0.10871945, MAE_E_per_atom=   19.53 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:42.360 INFO: Epoch 254: head: Default, loss=0.12239394, MAE_E_per_atom=   20.98 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:45.118 INFO: Epoch 255: head: Default, loss=0.09636627, MAE_E_per_atom=   18.08 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:47.881 INFO: Epoch 256: head: Default, loss=0.07296348, MAE_E_per_atom=   17.81 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:50.610 INFO: Epoch 257: head: Default, loss=0.06651955, MAE_E_per_atom=   17.66 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:53.356 INFO: Epoch 258: head: Default, loss=0.06606589, MAE_E_per_atom=   17.52 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:56.140 INFO: Epoch 259: head: Default, loss=0.06870788, MAE_E_per_atom=   17.47 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:49:58.867 INFO: Epoch 260: head: Default, loss=0.08788458, MAE_E_per_atom=   17.46 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:01.610 INFO: Epoch 261: head: Default, loss=0.11618213, MAE_E_per_atom=   20.14 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:04.358 INFO: Epoch 262: head: Default, loss=0.12625245, MAE_E_per_atom=   21.06 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:07.158 INFO: Epoch 263: head: Default, loss=0.09979207, MAE_E_per_atom=   18.26 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:09.882 INFO: Epoch 264: head: Default, loss=0.07393377, MAE_E_per_atom=   17.21 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:12.655 INFO: Epoch 265: head: Default, loss=0.06501191, MAE_E_per_atom=   17.20 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:15.442 INFO: Epoch 266: head: Default, loss=0.06559621, MAE_E_per_atom=   17.26 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:18.147 INFO: Epoch 267: head: Default, loss=0.06552897, MAE_E_per_atom=   17.43 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:20.891 INFO: Epoch 268: head: Default, loss=0.06990385, MAE_E_per_atom=   17.59 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:20.892 INFO: Stopping optimization after 20 epochs without improvement
+2025-09-01 14:50:20.892 INFO: Training complete
+2025-09-01 14:50:20.892 INFO: 
+2025-09-01 14:50:20.892 INFO: ===========RESULTS===========
+2025-09-01 14:50:20.898 INFO: Loading checkpoint: ./checkpoints/MACE_iter000_boot003_run-123_epoch-75.pt
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/tools/checkpoint.py:187: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=checkpoint_info.path, map_location=device),
+2025-09-01 14:50:20.913 INFO: Loaded Stage one model from epoch 75 for evaluation
+2025-09-01 14:50:20.913 INFO: Saving model to checkpoints/MACE_iter000_boot003_run-123.model
+2025-09-01 14:50:21.055 INFO: Compiling model, saving metadata to MACE_iter000_boot003_compiled.model
+2025-09-01 14:50:21.555 INFO: Computing metrics for training, validation, and test sets
+2025-09-01 14:50:21.555 INFO: Skipping evaluation for heads: ['pt_head']
+2025-09-01 14:50:21.556 INFO: Evaluating train_Default ...
+2025-09-01 14:50:22.689 INFO: Evaluating valid_Default ...
+2025-09-01 14:50:22.822 INFO: Error-table on TRAIN and VALID:
++---------------+--------------------+-----------------+------------------+
+|  config_type  | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++---------------+--------------------+-----------------+------------------+
+| train_Default |          23.9      |          0.1    |       100.07     |
+| valid_Default |          16.6      |          0.1    |       100.22     |
++---------------+--------------------+-----------------+------------------+
+2025-09-01 14:50:22.822 INFO: Evaluating Default_Default ...
+2025-09-01 14:50:23.173 INFO: Error-table on TEST:
++-----------------+--------------------+-----------------+------------------+
+|   config_type   | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++-----------------+--------------------+-----------------+------------------+
+| Default_Default |         131.6      |          0.0    |       100.33     |
++-----------------+--------------------+-----------------+------------------+
+2025-09-01 14:50:24.312 INFO: Loading checkpoint: ./checkpoints/MACE_iter000_boot003_run-123_epoch-248_swa.pt
+2025-09-01 14:50:24.327 INFO: Loaded Stage two model from epoch 248 for evaluation
+2025-09-01 14:50:24.327 INFO: Saving model to checkpoints/MACE_iter000_boot003_run-123_stagetwo.model
+2025-09-01 14:50:24.469 INFO: Compiling model, saving metadata MACE_iter000_boot003_stagetwo_compiled.model
+2025-09-01 14:50:25.108 INFO: Computing metrics for training, validation, and test sets
+2025-09-01 14:50:25.109 INFO: Skipping evaluation for heads: ['pt_head']
+2025-09-01 14:50:25.109 INFO: Evaluating train_Default ...
+2025-09-01 14:50:26.245 INFO: Evaluating valid_Default ...
+2025-09-01 14:50:26.375 INFO: Error-table on TRAIN and VALID:
++---------------+--------------------+-----------------+------------------+
+|  config_type  | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++---------------+--------------------+-----------------+------------------+
+| train_Default |          24.3      |          0.1    |       100.02     |
+| valid_Default |          16.5      |          0.1    |       100.22     |
++---------------+--------------------+-----------------+------------------+
+2025-09-01 14:50:26.375 INFO: Evaluating Default_Default ...
+2025-09-01 14:50:26.726 INFO: Error-table on TEST:
++-----------------+--------------------+-----------------+------------------+
+|   config_type   | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++-----------------+--------------------+-----------------+------------------+
+| Default_Default |          62.3      |          0.0    |       100.36     |
++-----------------+--------------------+-----------------+------------------+
+2025-09-01 14:50:27.865 INFO: Done
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2025-09-01 14:50:33.180 INFO: ===========VERIFYING SETTINGS===========
+2025-09-01 14:50:33.181 INFO: MACE version: 0.3.14
+2025-09-01 14:50:33.181 INFO: Using CPU
+2025-09-01 14:50:33.244 INFO: ===========LOADING INPUT DATA===========
+2025-09-01 14:50:33.244 INFO: Using heads: ['Default']
+2025-09-01 14:50:33.244 INFO: Using the key specifications to parse data:
+2025-09-01 14:50:33.244 INFO: Default: KeySpecification(info_keys={'energy': 'REF_energy', 'stress': 'REF_stress', 'virials': 'REF_virials', 'dipole': 'dipole', 'head': 'head', 'elec_temp': 'elec_temp', 'total_charge': 'charge', 'polarizability': 'polarizability', 'total_spin': 'total_spin'}, arrays_keys={'forces': 'REF_forces', 'charges': 'REF_charges'})
+2025-09-01 14:50:33.244 INFO: =============    Processing head Default     ===========
+2025-09-01 14:50:33.263 INFO: Training set 1/1 [energy: 43, stress: 0, virials: 0, dipole components: 0, head: 43, elec_temp: 0, total_charge: 43, polarizability: 0, total_spin: 0, forces: 43, charges: 0]
+2025-09-01 14:50:33.264 INFO: Total Training set [energy: 43, stress: 0, virials: 0, dipole components: 0, head: 43, elec_temp: 0, total_charge: 43, polarizability: 0, total_spin: 0, forces: 43, charges: 0]
+2025-09-01 14:50:33.266 INFO: Validation set 1/1 [energy: 5, stress: 0, virials: 0, dipole components: 0, head: 5, elec_temp: 0, total_charge: 5, polarizability: 0, total_spin: 0, forces: 5, charges: 0]
+2025-09-01 14:50:33.266 INFO: Total Validation set [energy: 5, stress: 0, virials: 0, dipole components: 0, head: 5, elec_temp: 0, total_charge: 5, polarizability: 0, total_spin: 0, forces: 5, charges: 0]
+2025-09-01 14:50:33.271 INFO: Test set 1/1 [energy: 12, stress: 0, virials: 0, dipole components: 0, head: 12, elec_temp: 0, total_charge: 12, polarizability: 0, total_spin: 0, forces: 12, charges: 0]
+2025-09-01 14:50:33.271 INFO: Total Test set [energy: 12, stress: 0, virials: 0, dipole components: 0, head: 12, elec_temp: 0, total_charge: 12, polarizability: 0, total_spin: 0, forces: 12, charges: 0]
+2025-09-01 14:50:33.271 INFO: Total number of configurations: train=43, valid=5, tests=[Default_Default: 12],
+2025-09-01 14:50:33.271 WARNING: Validation batch size (32) is larger than the number of validation data (5)
+2025-09-01 14:50:33.272 INFO: Atomic Numbers used: [11]
+2025-09-01 14:50:33.272 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2025-09-01 14:50:33.272 INFO: Computing average Atomic Energies using least squares regression
+2025-09-01 14:50:33.272 INFO: Atomic Energies used (z: eV) for head Default: {11: -55.44994183465991}
+2025-09-01 14:50:33.272 INFO: Processing datasets for head 'Default'
+2025-09-01 14:50:33.290 INFO: Combining 1 list datasets for head 'Default'
+2025-09-01 14:50:33.291 INFO: Combining 1 list datasets for head 'Default_valid'
+2025-09-01 14:50:33.291 INFO: Combined validation datasets for Default
+2025-09-01 14:50:33.292 INFO: Head 'Default' training dataset size: 43
+2025-09-01 14:50:33.292 INFO: Computing average number of neighbors
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/utils/data/dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+2025-09-01 14:50:33.297 INFO: Average number of neighbors: 5.8046875
+2025-09-01 14:50:33.297 INFO: During training the following quantities will be reported: energy, forces
+2025-09-01 14:50:33.297 INFO: ===========MODEL DETAILS===========
+2025-09-01 14:50:33.301 INFO: Using embedding specifications from command line arguments
+2025-09-01 14:50:33.301 INFO: Embedding specifications: {'total_charge': {'type': 'continuous', 'per': 'graph', 'in_dim': 1, 'emb_dim': 128, 'min': -3, 'max': 3}}
+2025-09-01 14:50:33.301 INFO: Building model
+2025-09-01 14:50:33.301 INFO: Message passing with 128 channels and max_L=1 (128x0e+128x1o)
+2025-09-01 14:50:33.301 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2025-09-01 14:50:33.301 INFO: 8 radial and 5 basis functions
+2025-09-01 14:50:33.302 INFO: Radial cutoff: 9.0 A (total receptive field for each atom: 18.0 A)
+2025-09-01 14:50:33.302 INFO: Distance transform for radial basis functions: None
+2025-09-01 14:50:33.302 INFO: Hidden irreps: 128x0e+128x1o
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+2025-09-01 14:50:34.137 INFO: Total number of parameters: 591888
+2025-09-01 14:50:34.137 INFO: 
+2025-09-01 14:50:34.137 INFO: ===========OPTIMIZER INFORMATION===========
+2025-09-01 14:50:34.137 INFO: Using ADAM as parameter optimizer
+2025-09-01 14:50:34.137 INFO: Batch size: 32
+2025-09-01 14:50:34.137 INFO: Using Exponential Moving Average with decay: 0.99
+2025-09-01 14:50:34.137 INFO: Number of gradient updates: 403
+2025-09-01 14:50:34.137 INFO: Learning rate: 0.01, weight decay: 5e-07
+2025-09-01 14:50:34.137 INFO: WeightedEnergyForcesLoss(energy_weight=1.000, forces_weight=100.000)
+2025-09-01 14:50:34.138 INFO: Stage Two (after 225 epochs) with loss function: WeightedEnergyForcesLoss(energy_weight=1000.000, forces_weight=100.000), with energy weight : 1000.0, forces weight : 100.0 and learning rate : 0.001
+2025-09-01 14:50:34.196 INFO: Using gradient clipping with tolerance=10.000
+2025-09-01 14:50:34.196 INFO: 
+2025-09-01 14:50:34.196 INFO: ===========TRAINING===========
+2025-09-01 14:50:34.196 INFO: Started training, reporting errors on validation set
+2025-09-01 14:50:34.196 INFO: Loss metrics on validation set
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/utils/data/dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+2025-09-01 14:50:34.427 INFO: Initial: head: Default, loss=0.01955400, MAE_E_per_atom=  256.37 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:37.495 INFO: Epoch 0: head: Default, loss=0.26742283, MAE_E_per_atom=  902.92 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:40.411 INFO: Epoch 1: head: Default, loss=0.05148410, MAE_E_per_atom=  438.65 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:43.299 INFO: Epoch 2: head: Default, loss=0.09241298, MAE_E_per_atom=  576.49 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:46.007 INFO: Epoch 3: head: Default, loss=0.02100329, MAE_E_per_atom=  306.72 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:48.863 INFO: Epoch 4: head: Default, loss=0.00075679, MAE_E_per_atom=   58.72 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:51.682 INFO: Epoch 5: head: Default, loss=0.01469293, MAE_E_per_atom=  226.66 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:54.437 INFO: Epoch 6: head: Default, loss=0.02285338, MAE_E_per_atom=  268.75 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:50:57.235 INFO: Epoch 7: head: Default, loss=0.01553935, MAE_E_per_atom=  251.24 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:00.013 INFO: Epoch 8: head: Default, loss=0.00449799, MAE_E_per_atom=  148.84 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:02.756 INFO: Epoch 9: head: Default, loss=0.00114154, MAE_E_per_atom=   73.18 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:05.530 INFO: Epoch 10: head: Default, loss=0.00592188, MAE_E_per_atom=  144.15 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:08.266 INFO: Epoch 11: head: Default, loss=0.00850377, MAE_E_per_atom=  186.73 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:11.062 INFO: Epoch 12: head: Default, loss=0.00435414, MAE_E_per_atom=  129.94 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:13.786 INFO: Epoch 13: head: Default, loss=0.00054379, MAE_E_per_atom=   48.61 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:16.609 INFO: Epoch 14: head: Default, loss=0.00129211, MAE_E_per_atom=   78.01 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:19.330 INFO: Epoch 15: head: Default, loss=0.00358979, MAE_E_per_atom=  115.59 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:22.092 INFO: Epoch 16: head: Default, loss=0.00403586, MAE_E_per_atom=  116.14 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:24.844 INFO: Epoch 17: head: Default, loss=0.00234564, MAE_E_per_atom=   96.77 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:27.635 INFO: Epoch 18: head: Default, loss=0.00078445, MAE_E_per_atom=   59.92 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:30.429 INFO: Epoch 19: head: Default, loss=0.00029587, MAE_E_per_atom=   32.63 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:33.241 INFO: Epoch 20: head: Default, loss=0.00084685, MAE_E_per_atom=   55.27 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:36.018 INFO: Epoch 21: head: Default, loss=0.00185176, MAE_E_per_atom=   80.44 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:38.789 INFO: Epoch 22: head: Default, loss=0.00263042, MAE_E_per_atom=  100.55 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:41.559 INFO: Epoch 23: head: Default, loss=0.00282100, MAE_E_per_atom=  108.76 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:44.316 INFO: Epoch 24: head: Default, loss=0.00217846, MAE_E_per_atom=   91.46 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:47.118 INFO: Epoch 25: head: Default, loss=0.00132253, MAE_E_per_atom=   68.75 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:49.899 INFO: Epoch 26: head: Default, loss=0.00069113, MAE_E_per_atom=   52.63 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:52.687 INFO: Epoch 27: head: Default, loss=0.00053733, MAE_E_per_atom=   45.26 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:55.386 INFO: Epoch 28: head: Default, loss=0.00048445, MAE_E_per_atom=   37.38 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:51:58.184 INFO: Epoch 29: head: Default, loss=0.00034236, MAE_E_per_atom=   37.22 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:00.946 INFO: Epoch 30: head: Default, loss=0.00047838, MAE_E_per_atom=   41.84 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:03.728 INFO: Epoch 31: head: Default, loss=0.00075405, MAE_E_per_atom=   57.68 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:06.437 INFO: Epoch 32: head: Default, loss=0.00085336, MAE_E_per_atom=   62.66 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:09.153 INFO: Epoch 33: head: Default, loss=0.00057529, MAE_E_per_atom=   49.55 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:11.881 INFO: Epoch 34: head: Default, loss=0.00032352, MAE_E_per_atom=   33.86 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:14.641 INFO: Epoch 35: head: Default, loss=0.00023907, MAE_E_per_atom=   29.31 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:17.457 INFO: Epoch 36: head: Default, loss=0.00029486, MAE_E_per_atom=   30.27 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:20.267 INFO: Epoch 37: head: Default, loss=0.00022059, MAE_E_per_atom=   28.05 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:23.090 INFO: Epoch 38: head: Default, loss=0.00017578, MAE_E_per_atom=   24.97 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:25.917 INFO: Epoch 39: head: Default, loss=0.00023027, MAE_E_per_atom=   28.66 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:28.694 INFO: Epoch 40: head: Default, loss=0.00032913, MAE_E_per_atom=   35.90 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:31.446 INFO: Epoch 41: head: Default, loss=0.00036621, MAE_E_per_atom=   38.01 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:34.166 INFO: Epoch 42: head: Default, loss=0.00029434, MAE_E_per_atom=   33.30 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:36.937 INFO: Epoch 43: head: Default, loss=0.00022696, MAE_E_per_atom=   28.22 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:39.723 INFO: Epoch 44: head: Default, loss=0.00021457, MAE_E_per_atom=   28.11 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:42.496 INFO: Epoch 45: head: Default, loss=0.00023840, MAE_E_per_atom=   28.96 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:45.246 INFO: Epoch 46: head: Default, loss=0.00023129, MAE_E_per_atom=   26.90 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:48.001 INFO: Epoch 47: head: Default, loss=0.00018415, MAE_E_per_atom=   24.14 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:50.715 INFO: Epoch 48: head: Default, loss=0.00020578, MAE_E_per_atom=   25.37 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:53.440 INFO: Epoch 49: head: Default, loss=0.00028063, MAE_E_per_atom=   30.91 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:56.165 INFO: Epoch 50: head: Default, loss=0.00035844, MAE_E_per_atom=   35.54 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:52:58.956 INFO: Epoch 51: head: Default, loss=0.00028981, MAE_E_per_atom=   32.09 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:01.721 INFO: Epoch 52: head: Default, loss=0.00023668, MAE_E_per_atom=   28.44 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:04.449 INFO: Epoch 53: head: Default, loss=0.00022954, MAE_E_per_atom=   27.22 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:07.236 INFO: Epoch 54: head: Default, loss=0.00026973, MAE_E_per_atom=   29.33 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:09.966 INFO: Epoch 55: head: Default, loss=0.00026218, MAE_E_per_atom=   28.84 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:12.738 INFO: Epoch 56: head: Default, loss=0.00021228, MAE_E_per_atom=   25.78 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:15.511 INFO: Epoch 57: head: Default, loss=0.00015871, MAE_E_per_atom=   22.09 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:18.294 INFO: Epoch 58: head: Default, loss=0.00020110, MAE_E_per_atom=   25.68 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:21.004 INFO: Epoch 59: head: Default, loss=0.00025944, MAE_E_per_atom=   29.35 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:23.733 INFO: Epoch 60: head: Default, loss=0.00021222, MAE_E_per_atom=   27.00 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:26.502 INFO: Epoch 61: head: Default, loss=0.00014836, MAE_E_per_atom=   22.79 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:29.331 INFO: Epoch 62: head: Default, loss=0.00013975, MAE_E_per_atom=   22.03 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:32.144 INFO: Epoch 63: head: Default, loss=0.00021757, MAE_E_per_atom=   27.10 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:34.893 INFO: Epoch 64: head: Default, loss=0.00019880, MAE_E_per_atom=   25.61 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:37.658 INFO: Epoch 65: head: Default, loss=0.00013897, MAE_E_per_atom=   20.82 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:40.465 INFO: Epoch 66: head: Default, loss=0.00013742, MAE_E_per_atom=   20.32 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:43.284 INFO: Epoch 67: head: Default, loss=0.00021825, MAE_E_per_atom=   26.10 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:46.036 INFO: Epoch 68: head: Default, loss=0.00021390, MAE_E_per_atom=   25.98 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:48.809 INFO: Epoch 69: head: Default, loss=0.00015897, MAE_E_per_atom=   22.28 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:51.573 INFO: Epoch 70: head: Default, loss=0.00016774, MAE_E_per_atom=   22.95 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:54.360 INFO: Epoch 71: head: Default, loss=0.00022674, MAE_E_per_atom=   26.86 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:57.135 INFO: Epoch 72: head: Default, loss=0.00020961, MAE_E_per_atom=   25.82 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:53:59.906 INFO: Epoch 73: head: Default, loss=0.00016583, MAE_E_per_atom=   22.81 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:02.659 INFO: Epoch 74: head: Default, loss=0.00016920, MAE_E_per_atom=   23.06 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:05.387 INFO: Epoch 75: head: Default, loss=0.00022046, MAE_E_per_atom=   26.38 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:08.175 INFO: Epoch 76: head: Default, loss=0.00025867, MAE_E_per_atom=   28.43 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:10.912 INFO: Epoch 77: head: Default, loss=0.00019392, MAE_E_per_atom=   24.67 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:13.669 INFO: Epoch 78: head: Default, loss=0.00016895, MAE_E_per_atom=   22.94 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:16.462 INFO: Epoch 79: head: Default, loss=0.00022531, MAE_E_per_atom=   26.48 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:19.169 INFO: Epoch 80: head: Default, loss=0.00025784, MAE_E_per_atom=   28.23 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:21.942 INFO: Epoch 81: head: Default, loss=0.00023374, MAE_E_per_atom=   26.95 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:24.718 INFO: Epoch 82: head: Default, loss=0.00020261, MAE_E_per_atom=   25.15 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:27.505 INFO: Epoch 83: head: Default, loss=0.00020149, MAE_E_per_atom=   25.11 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:30.235 INFO: Epoch 84: head: Default, loss=0.00023057, MAE_E_per_atom=   26.86 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:32.986 INFO: Epoch 85: head: Default, loss=0.00025160, MAE_E_per_atom=   28.03 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:35.717 INFO: Epoch 86: head: Default, loss=0.00024833, MAE_E_per_atom=   27.89 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:35.717 INFO: Stopping optimization after 20 epochs without improvement and starting Stage Two
+2025-09-01 14:54:35.717 INFO: Changing loss based on Stage Two Weights
+2025-09-01 14:54:38.441 INFO: Epoch 226: head: Default, loss=0.11550987, MAE_E_per_atom=   18.33 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:41.262 INFO: Epoch 227: head: Default, loss=0.07708290, MAE_E_per_atom=   16.89 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:44.049 INFO: Epoch 228: head: Default, loss=0.07430289, MAE_E_per_atom=   16.65 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:46.868 INFO: Epoch 229: head: Default, loss=0.11130801, MAE_E_per_atom=   17.93 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:49.637 INFO: Epoch 230: head: Default, loss=0.30026252, MAE_E_per_atom=   30.33 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:52.381 INFO: Epoch 231: head: Default, loss=0.56470307, MAE_E_per_atom=   40.74 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:55.138 INFO: Epoch 232: head: Default, loss=0.68516990, MAE_E_per_atom=   44.56 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:54:57.943 INFO: Epoch 233: head: Default, loss=0.51693341, MAE_E_per_atom=   39.28 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:00.682 INFO: Epoch 234: head: Default, loss=0.31096614, MAE_E_per_atom=   31.10 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:03.444 INFO: Epoch 235: head: Default, loss=0.19009854, MAE_E_per_atom=   24.40 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:06.203 INFO: Epoch 236: head: Default, loss=0.16042069, MAE_E_per_atom=   22.17 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:08.912 INFO: Epoch 237: head: Default, loss=0.22612914, MAE_E_per_atom=   26.46 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:11.669 INFO: Epoch 238: head: Default, loss=0.35343878, MAE_E_per_atom=   32.75 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:14.460 INFO: Epoch 239: head: Default, loss=0.47816932, MAE_E_per_atom=   37.63 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:17.237 INFO: Epoch 240: head: Default, loss=0.50619482, MAE_E_per_atom=   38.58 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:19.991 INFO: Epoch 241: head: Default, loss=0.39138220, MAE_E_per_atom=   34.08 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:22.780 INFO: Epoch 242: head: Default, loss=0.26479547, MAE_E_per_atom=   28.54 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:25.569 INFO: Epoch 243: head: Default, loss=0.18731760, MAE_E_per_atom=   24.29 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:28.354 INFO: Epoch 244: head: Default, loss=0.16499497, MAE_E_per_atom=   22.78 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:31.136 INFO: Epoch 245: head: Default, loss=0.20331109, MAE_E_per_atom=   25.39 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:33.887 INFO: Epoch 246: head: Default, loss=0.27039532, MAE_E_per_atom=   29.07 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:36.654 INFO: Epoch 247: head: Default, loss=0.32740561, MAE_E_per_atom=   31.63 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:39.414 INFO: Epoch 248: head: Default, loss=0.32752894, MAE_E_per_atom=   31.54 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:39.414 INFO: Stopping optimization after 20 epochs without improvement
+2025-09-01 14:55:39.414 INFO: Training complete
+2025-09-01 14:55:39.414 INFO: 
+2025-09-01 14:55:39.414 INFO: ===========RESULTS===========
+2025-09-01 14:55:39.420 INFO: Loading checkpoint: ./checkpoints/MACE_iter000_boot004_run-123_epoch-66.pt
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/tools/checkpoint.py:187: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=checkpoint_info.path, map_location=device),
+2025-09-01 14:55:39.435 INFO: Loaded Stage one model from epoch 66 for evaluation
+2025-09-01 14:55:39.435 INFO: Saving model to checkpoints/MACE_iter000_boot004_run-123.model
+2025-09-01 14:55:39.576 INFO: Compiling model, saving metadata to MACE_iter000_boot004_compiled.model
+2025-09-01 14:55:40.232 INFO: Computing metrics for training, validation, and test sets
+2025-09-01 14:55:40.233 INFO: Skipping evaluation for heads: ['pt_head']
+2025-09-01 14:55:40.233 INFO: Evaluating train_Default ...
+2025-09-01 14:55:41.359 INFO: Evaluating valid_Default ...
+2025-09-01 14:55:41.494 INFO: Error-table on TRAIN and VALID:
++---------------+--------------------+-----------------+------------------+
+|  config_type  | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++---------------+--------------------+-----------------+------------------+
+| train_Default |          35.2      |          0.1    |       101.88     |
+| valid_Default |          20.3      |          0.1    |       101.46     |
++---------------+--------------------+-----------------+------------------+
+2025-09-01 14:55:41.494 INFO: Evaluating Default_Default ...
+2025-09-01 14:55:41.834 INFO: Error-table on TEST:
++-----------------+--------------------+-----------------+------------------+
+|   config_type   | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++-----------------+--------------------+-----------------+------------------+
+| Default_Default |          79.8      |          0.1    |       109.33     |
++-----------------+--------------------+-----------------+------------------+
+2025-09-01 14:55:42.962 INFO: Loading checkpoint: ./checkpoints/MACE_iter000_boot004_run-123_epoch-228_swa.pt
+2025-09-01 14:55:42.976 INFO: Loaded Stage two model from epoch 228 for evaluation
+2025-09-01 14:55:42.976 INFO: Saving model to checkpoints/MACE_iter000_boot004_run-123_stagetwo.model
+2025-09-01 14:55:43.120 INFO: Compiling model, saving metadata MACE_iter000_boot004_stagetwo_compiled.model
+2025-09-01 14:55:43.591 INFO: Computing metrics for training, validation, and test sets
+2025-09-01 14:55:43.592 INFO: Skipping evaluation for heads: ['pt_head']
+2025-09-01 14:55:43.592 INFO: Evaluating train_Default ...
+2025-09-01 14:55:44.718 INFO: Evaluating valid_Default ...
+2025-09-01 14:55:44.849 INFO: Error-table on TRAIN and VALID:
++---------------+--------------------+-----------------+------------------+
+|  config_type  | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++---------------+--------------------+-----------------+------------------+
+| train_Default |          42.0      |          0.1    |       103.03     |
+| valid_Default |          16.7      |          0.1    |       101.82     |
++---------------+--------------------+-----------------+------------------+
+2025-09-01 14:55:44.850 INFO: Evaluating Default_Default ...
+2025-09-01 14:55:45.189 INFO: Error-table on TEST:
++-----------------+--------------------+-----------------+------------------+
+|   config_type   | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++-----------------+--------------------+-----------------+------------------+
+| Default_Default |          62.7      |          0.1    |       111.91     |
++-----------------+--------------------+-----------------+------------------+
+2025-09-01 14:55:46.323 INFO: Done
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2025-09-01 14:55:51.620 INFO: ===========VERIFYING SETTINGS===========
+2025-09-01 14:55:51.621 INFO: MACE version: 0.3.14
+2025-09-01 14:55:51.622 INFO: Using CPU
+2025-09-01 14:55:51.684 INFO: ===========LOADING INPUT DATA===========
+2025-09-01 14:55:51.684 INFO: Using heads: ['Default']
+2025-09-01 14:55:51.684 INFO: Using the key specifications to parse data:
+2025-09-01 14:55:51.684 INFO: Default: KeySpecification(info_keys={'energy': 'REF_energy', 'stress': 'REF_stress', 'virials': 'REF_virials', 'dipole': 'dipole', 'head': 'head', 'elec_temp': 'elec_temp', 'total_charge': 'charge', 'polarizability': 'polarizability', 'total_spin': 'total_spin'}, arrays_keys={'forces': 'REF_forces', 'charges': 'REF_charges'})
+2025-09-01 14:55:51.684 INFO: =============    Processing head Default     ===========
+2025-09-01 14:55:51.703 INFO: Training set 1/1 [energy: 43, stress: 0, virials: 0, dipole components: 0, head: 43, elec_temp: 0, total_charge: 43, polarizability: 0, total_spin: 0, forces: 43, charges: 0]
+2025-09-01 14:55:51.703 INFO: Total Training set [energy: 43, stress: 0, virials: 0, dipole components: 0, head: 43, elec_temp: 0, total_charge: 43, polarizability: 0, total_spin: 0, forces: 43, charges: 0]
+2025-09-01 14:55:51.706 INFO: Validation set 1/1 [energy: 5, stress: 0, virials: 0, dipole components: 0, head: 5, elec_temp: 0, total_charge: 5, polarizability: 0, total_spin: 0, forces: 5, charges: 0]
+2025-09-01 14:55:51.706 INFO: Total Validation set [energy: 5, stress: 0, virials: 0, dipole components: 0, head: 5, elec_temp: 0, total_charge: 5, polarizability: 0, total_spin: 0, forces: 5, charges: 0]
+2025-09-01 14:55:51.710 INFO: Test set 1/1 [energy: 12, stress: 0, virials: 0, dipole components: 0, head: 12, elec_temp: 0, total_charge: 12, polarizability: 0, total_spin: 0, forces: 12, charges: 0]
+2025-09-01 14:55:51.711 INFO: Total Test set [energy: 12, stress: 0, virials: 0, dipole components: 0, head: 12, elec_temp: 0, total_charge: 12, polarizability: 0, total_spin: 0, forces: 12, charges: 0]
+2025-09-01 14:55:51.711 INFO: Total number of configurations: train=43, valid=5, tests=[Default_Default: 12],
+2025-09-01 14:55:51.711 WARNING: Validation batch size (32) is larger than the number of validation data (5)
+2025-09-01 14:55:51.711 INFO: Atomic Numbers used: [11]
+2025-09-01 14:55:51.711 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2025-09-01 14:55:51.711 INFO: Computing average Atomic Energies using least squares regression
+2025-09-01 14:55:51.712 INFO: Atomic Energies used (z: eV) for head Default: {11: -55.47393755386646}
+2025-09-01 14:55:51.712 INFO: Processing datasets for head 'Default'
+2025-09-01 14:55:51.728 INFO: Combining 1 list datasets for head 'Default'
+2025-09-01 14:55:51.729 INFO: Combining 1 list datasets for head 'Default_valid'
+2025-09-01 14:55:51.729 INFO: Combined validation datasets for Default
+2025-09-01 14:55:51.729 INFO: Head 'Default' training dataset size: 43
+2025-09-01 14:55:51.730 INFO: Computing average number of neighbors
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/utils/data/dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+2025-09-01 14:55:51.735 INFO: Average number of neighbors: 6.1484375
+2025-09-01 14:55:51.735 INFO: During training the following quantities will be reported: energy, forces
+2025-09-01 14:55:51.735 INFO: ===========MODEL DETAILS===========
+2025-09-01 14:55:51.740 INFO: Using embedding specifications from command line arguments
+2025-09-01 14:55:51.740 INFO: Embedding specifications: {'total_charge': {'type': 'continuous', 'per': 'graph', 'in_dim': 1, 'emb_dim': 128, 'min': -3, 'max': 3}}
+2025-09-01 14:55:51.740 INFO: Building model
+2025-09-01 14:55:51.740 INFO: Message passing with 128 channels and max_L=1 (128x0e+128x1o)
+2025-09-01 14:55:51.740 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2025-09-01 14:55:51.740 INFO: 8 radial and 5 basis functions
+2025-09-01 14:55:51.740 INFO: Radial cutoff: 9.0 A (total receptive field for each atom: 18.0 A)
+2025-09-01 14:55:51.740 INFO: Distance transform for radial basis functions: None
+2025-09-01 14:55:51.740 INFO: Hidden irreps: 128x0e+128x1o
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+2025-09-01 14:55:52.573 INFO: Total number of parameters: 591888
+2025-09-01 14:55:52.573 INFO: 
+2025-09-01 14:55:52.573 INFO: ===========OPTIMIZER INFORMATION===========
+2025-09-01 14:55:52.573 INFO: Using ADAM as parameter optimizer
+2025-09-01 14:55:52.574 INFO: Batch size: 32
+2025-09-01 14:55:52.574 INFO: Using Exponential Moving Average with decay: 0.99
+2025-09-01 14:55:52.574 INFO: Number of gradient updates: 403
+2025-09-01 14:55:52.574 INFO: Learning rate: 0.01, weight decay: 5e-07
+2025-09-01 14:55:52.574 INFO: WeightedEnergyForcesLoss(energy_weight=1.000, forces_weight=100.000)
+2025-09-01 14:55:52.574 INFO: Stage Two (after 225 epochs) with loss function: WeightedEnergyForcesLoss(energy_weight=1000.000, forces_weight=100.000), with energy weight : 1000.0, forces weight : 100.0 and learning rate : 0.001
+2025-09-01 14:55:52.632 INFO: Using gradient clipping with tolerance=10.000
+2025-09-01 14:55:52.632 INFO: 
+2025-09-01 14:55:52.632 INFO: ===========TRAINING===========
+2025-09-01 14:55:52.632 INFO: Started training, reporting errors on validation set
+2025-09-01 14:55:52.632 INFO: Loss metrics on validation set
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/torch/utils/data/dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+2025-09-01 14:55:52.871 INFO: Initial: head: Default, loss=0.01750228, MAE_E_per_atom=  251.57 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:56.000 INFO: Epoch 0: head: Default, loss=0.28065082, MAE_E_per_atom=  962.09 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:55:58.938 INFO: Epoch 1: head: Default, loss=0.04685687, MAE_E_per_atom=  427.11 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:01.868 INFO: Epoch 2: head: Default, loss=0.08096184, MAE_E_per_atom=  543.85 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:04.671 INFO: Epoch 3: head: Default, loss=0.01594145, MAE_E_per_atom=  266.29 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:07.510 INFO: Epoch 4: head: Default, loss=0.00095646, MAE_E_per_atom=   58.74 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:10.377 INFO: Epoch 5: head: Default, loss=0.01503622, MAE_E_per_atom=  240.27 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:13.187 INFO: Epoch 6: head: Default, loss=0.02167544, MAE_E_per_atom=  271.65 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:16.005 INFO: Epoch 7: head: Default, loss=0.01384361, MAE_E_per_atom=  226.91 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:18.820 INFO: Epoch 8: head: Default, loss=0.00389746, MAE_E_per_atom=  138.33 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:21.633 INFO: Epoch 9: head: Default, loss=0.00131568, MAE_E_per_atom=   78.57 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:24.417 INFO: Epoch 10: head: Default, loss=0.00591594, MAE_E_per_atom=  139.55 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:27.213 INFO: Epoch 11: head: Default, loss=0.00905777, MAE_E_per_atom=  189.97 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:30.028 INFO: Epoch 12: head: Default, loss=0.00564936, MAE_E_per_atom=  146.80 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:32.839 INFO: Epoch 13: head: Default, loss=0.00111534, MAE_E_per_atom=   62.84 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:35.640 INFO: Epoch 14: head: Default, loss=0.00047943, MAE_E_per_atom=   45.42 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:38.526 INFO: Epoch 15: head: Default, loss=0.00269628, MAE_E_per_atom=   96.23 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:41.350 INFO: Epoch 16: head: Default, loss=0.00436629, MAE_E_per_atom=  120.94 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:44.122 INFO: Epoch 17: head: Default, loss=0.00355174, MAE_E_per_atom=  112.42 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:46.936 INFO: Epoch 18: head: Default, loss=0.00174543, MAE_E_per_atom=   88.36 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:49.767 INFO: Epoch 19: head: Default, loss=0.00031758, MAE_E_per_atom=   35.53 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:52.593 INFO: Epoch 20: head: Default, loss=0.00018683, MAE_E_per_atom=   26.37 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:55.433 INFO: Epoch 21: head: Default, loss=0.00094384, MAE_E_per_atom=   59.76 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:56:58.241 INFO: Epoch 22: head: Default, loss=0.00172406, MAE_E_per_atom=   77.71 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:01.035 INFO: Epoch 23: head: Default, loss=0.00227646, MAE_E_per_atom=   93.87 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:03.850 INFO: Epoch 24: head: Default, loss=0.00213679, MAE_E_per_atom=   87.12 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:06.673 INFO: Epoch 25: head: Default, loss=0.00162390, MAE_E_per_atom=   75.74 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:09.500 INFO: Epoch 26: head: Default, loss=0.00099845, MAE_E_per_atom=   60.20 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:12.315 INFO: Epoch 27: head: Default, loss=0.00051893, MAE_E_per_atom=   46.02 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:15.141 INFO: Epoch 28: head: Default, loss=0.00023649, MAE_E_per_atom=   29.00 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:17.942 INFO: Epoch 29: head: Default, loss=0.00010724, MAE_E_per_atom=   17.32 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:20.769 INFO: Epoch 30: head: Default, loss=0.00025780, MAE_E_per_atom=   31.33 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:23.570 INFO: Epoch 31: head: Default, loss=0.00052284, MAE_E_per_atom=   45.05 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:26.328 INFO: Epoch 32: head: Default, loss=0.00075533, MAE_E_per_atom=   57.75 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:29.150 INFO: Epoch 33: head: Default, loss=0.00062542, MAE_E_per_atom=   48.08 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:31.971 INFO: Epoch 34: head: Default, loss=0.00047150, MAE_E_per_atom=   42.21 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:34.790 INFO: Epoch 35: head: Default, loss=0.00032979, MAE_E_per_atom=   34.17 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:37.587 INFO: Epoch 36: head: Default, loss=0.00028252, MAE_E_per_atom=   32.51 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:40.342 INFO: Epoch 37: head: Default, loss=0.00014863, MAE_E_per_atom=   21.39 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:43.154 INFO: Epoch 38: head: Default, loss=0.00007414, MAE_E_per_atom=   17.34 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:46.015 INFO: Epoch 39: head: Default, loss=0.00010380, MAE_E_per_atom=   19.77 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:48.835 INFO: Epoch 40: head: Default, loss=0.00018720, MAE_E_per_atom=   24.68 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:51.665 INFO: Epoch 41: head: Default, loss=0.00020605, MAE_E_per_atom=   26.42 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:54.469 INFO: Epoch 42: head: Default, loss=0.00018426, MAE_E_per_atom=   25.08 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:57:57.274 INFO: Epoch 43: head: Default, loss=0.00016786, MAE_E_per_atom=   23.66 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:00.097 INFO: Epoch 44: head: Default, loss=0.00014792, MAE_E_per_atom=   21.19 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:02.898 INFO: Epoch 45: head: Default, loss=0.00010622, MAE_E_per_atom=   19.70 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:05.718 INFO: Epoch 46: head: Default, loss=0.00008380, MAE_E_per_atom=   17.97 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:08.549 INFO: Epoch 47: head: Default, loss=0.00008872, MAE_E_per_atom=   16.16 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:11.342 INFO: Epoch 48: head: Default, loss=0.00011862, MAE_E_per_atom=   18.43 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:14.131 INFO: Epoch 49: head: Default, loss=0.00014504, MAE_E_per_atom=   19.96 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:16.905 INFO: Epoch 50: head: Default, loss=0.00015455, MAE_E_per_atom=   22.07 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:19.728 INFO: Epoch 51: head: Default, loss=0.00016733, MAE_E_per_atom=   24.00 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:22.528 INFO: Epoch 52: head: Default, loss=0.00019044, MAE_E_per_atom=   24.58 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:25.351 INFO: Epoch 53: head: Default, loss=0.00019105, MAE_E_per_atom=   24.83 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:28.133 INFO: Epoch 54: head: Default, loss=0.00017533, MAE_E_per_atom=   23.34 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:30.935 INFO: Epoch 55: head: Default, loss=0.00015254, MAE_E_per_atom=   20.86 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:33.744 INFO: Epoch 56: head: Default, loss=0.00012317, MAE_E_per_atom=   18.48 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:36.609 INFO: Epoch 57: head: Default, loss=0.00010022, MAE_E_per_atom=   17.71 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:39.385 INFO: Epoch 58: head: Default, loss=0.00009495, MAE_E_per_atom=   16.96 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:39.386 INFO: Stopping optimization after 20 epochs without improvement and starting Stage Two
+2025-09-01 14:58:39.386 INFO: Changing loss based on Stage Two Weights
+2025-09-01 14:58:42.185 INFO: Epoch 226: head: Default, loss=0.07874034, MAE_E_per_atom=   16.95 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:45.052 INFO: Epoch 227: head: Default, loss=0.08399913, MAE_E_per_atom=   17.40 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:47.861 INFO: Epoch 228: head: Default, loss=0.18463632, MAE_E_per_atom=   24.18 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:50.601 INFO: Epoch 229: head: Default, loss=0.42423909, MAE_E_per_atom=   36.29 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:53.384 INFO: Epoch 230: head: Default, loss=0.50384380, MAE_E_per_atom=   39.27 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:56.196 INFO: Epoch 231: head: Default, loss=0.26397522, MAE_E_per_atom=   29.05 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:58:58.922 INFO: Epoch 232: head: Default, loss=0.10839170, MAE_E_per_atom=   18.13 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:01.754 INFO: Epoch 233: head: Default, loss=0.10480892, MAE_E_per_atom=   17.88 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:04.534 INFO: Epoch 234: head: Default, loss=0.10951909, MAE_E_per_atom=   17.38 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:07.289 INFO: Epoch 235: head: Default, loss=0.07514514, MAE_E_per_atom=   16.69 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:10.135 INFO: Epoch 236: head: Default, loss=0.14861779, MAE_E_per_atom=   21.31 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:12.936 INFO: Epoch 237: head: Default, loss=0.31900137, MAE_E_per_atom=   31.37 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:15.709 INFO: Epoch 238: head: Default, loss=0.42626662, MAE_E_per_atom=   36.12 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:18.433 INFO: Epoch 239: head: Default, loss=0.33828567, MAE_E_per_atom=   32.73 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:21.249 INFO: Epoch 240: head: Default, loss=0.22463341, MAE_E_per_atom=   27.13 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:24.082 INFO: Epoch 241: head: Default, loss=0.17008450, MAE_E_per_atom=   23.50 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:26.883 INFO: Epoch 242: head: Default, loss=0.19298318, MAE_E_per_atom=   24.67 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:29.671 INFO: Epoch 243: head: Default, loss=0.22781048, MAE_E_per_atom=   26.45 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:32.476 INFO: Epoch 244: head: Default, loss=0.21746201, MAE_E_per_atom=   26.09 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:35.272 INFO: Epoch 245: head: Default, loss=0.20118938, MAE_E_per_atom=   25.20 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:38.106 INFO: Epoch 246: head: Default, loss=0.20422446, MAE_E_per_atom=   25.31 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:40.914 INFO: Epoch 247: head: Default, loss=0.18879116, MAE_E_per_atom=   24.18 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:43.685 INFO: Epoch 248: head: Default, loss=0.15045719, MAE_E_per_atom=   21.37 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:46.535 INFO: Epoch 249: head: Default, loss=0.13361948, MAE_E_per_atom=   19.99 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:49.361 INFO: Epoch 250: head: Default, loss=0.15065828, MAE_E_per_atom=   21.53 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:52.225 INFO: Epoch 251: head: Default, loss=0.16694295, MAE_E_per_atom=   22.93 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:55.060 INFO: Epoch 252: head: Default, loss=0.16101984, MAE_E_per_atom=   22.44 meV, MAE_F=    0.14 meV / A
+2025-09-01 14:59:57.919 INFO: Epoch 253: head: Default, loss=0.13725175, MAE_E_per_atom=   19.99 meV, MAE_F=    0.14 meV / A
+2025-09-01 15:00:00.672 INFO: Epoch 254: head: Default, loss=0.12038994, MAE_E_per_atom=   18.09 meV, MAE_F=    0.14 meV / A
+2025-09-01 15:00:03.456 INFO: Epoch 255: head: Default, loss=0.11718440, MAE_E_per_atom=   17.94 meV, MAE_F=    0.14 meV / A
+2025-09-01 15:00:03.457 INFO: Stopping optimization after 20 epochs without improvement
+2025-09-01 15:00:03.457 INFO: Training complete
+2025-09-01 15:00:03.457 INFO: 
+2025-09-01 15:00:03.457 INFO: ===========RESULTS===========
+2025-09-01 15:00:03.463 INFO: Loading checkpoint: ./checkpoints/MACE_iter000_boot005_run-123_epoch-38.pt
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/tools/checkpoint.py:187: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=checkpoint_info.path, map_location=device),
+2025-09-01 15:00:03.478 INFO: Loaded Stage one model from epoch 38 for evaluation
+2025-09-01 15:00:03.479 INFO: Saving model to checkpoints/MACE_iter000_boot005_run-123.model
+2025-09-01 15:00:03.622 INFO: Compiling model, saving metadata to MACE_iter000_boot005_compiled.model
+2025-09-01 15:00:04.111 INFO: Computing metrics for training, validation, and test sets
+2025-09-01 15:00:04.112 INFO: Skipping evaluation for heads: ['pt_head']
+2025-09-01 15:00:04.112 INFO: Evaluating train_Default ...
+2025-09-01 15:00:05.252 INFO: Evaluating valid_Default ...
+2025-09-01 15:00:05.386 INFO: Error-table on TRAIN and VALID:
++---------------+--------------------+-----------------+------------------+
+|  config_type  | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++---------------+--------------------+-----------------+------------------+
+| train_Default |          33.0      |          0.1    |       100.49     |
+| valid_Default |          17.3      |          0.1    |       100.52     |
++---------------+--------------------+-----------------+------------------+
+2025-09-01 15:00:05.386 INFO: Evaluating Default_Default ...
+2025-09-01 15:00:05.736 INFO: Error-table on TEST:
++-----------------+--------------------+-----------------+------------------+
+|   config_type   | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++-----------------+--------------------+-----------------+------------------+
+| Default_Default |         160.3      |          0.1    |       101.75     |
++-----------------+--------------------+-----------------+------------------+
+2025-09-01 15:00:06.884 INFO: Loading checkpoint: ./checkpoints/MACE_iter000_boot005_run-123_epoch-235_swa.pt
+2025-09-01 15:00:06.898 INFO: Loaded Stage two model from epoch 235 for evaluation
+2025-09-01 15:00:06.898 INFO: Saving model to checkpoints/MACE_iter000_boot005_run-123_stagetwo.model
+2025-09-01 15:00:07.042 INFO: Compiling model, saving metadata MACE_iter000_boot005_stagetwo_compiled.model
+2025-09-01 15:00:07.671 INFO: Computing metrics for training, validation, and test sets
+2025-09-01 15:00:07.672 INFO: Skipping evaluation for heads: ['pt_head']
+2025-09-01 15:00:07.672 INFO: Evaluating train_Default ...
+2025-09-01 15:00:08.816 INFO: Evaluating valid_Default ...
+2025-09-01 15:00:08.950 INFO: Error-table on TRAIN and VALID:
++---------------+--------------------+-----------------+------------------+
+|  config_type  | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++---------------+--------------------+-----------------+------------------+
+| train_Default |          35.5      |          0.1    |       100.14     |
+| valid_Default |          16.7      |          0.1    |       100.48     |
++---------------+--------------------+-----------------+------------------+
+2025-09-01 15:00:08.950 INFO: Evaluating Default_Default ...
+2025-09-01 15:00:09.302 INFO: Error-table on TEST:
++-----------------+--------------------+-----------------+------------------+
+|   config_type   | MAE E / meV / atom | MAE F / meV / A | relative F MAE % |
++-----------------+--------------------+-----------------+------------------+
+| Default_Default |          83.2      |          0.1    |       101.65     |
++-----------------+--------------------+-----------------+------------------+
+2025-09-01 15:00:10.448 INFO: Done
+WARNING:root:'model_path' argument is deprecated, please use 'model_paths' in the future.
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/calculators/mace.py:197: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+WARNING:root:'model_path' argument is deprecated, please use 'model_paths' in the future.
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/calculators/mace.py:197: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+WARNING:root:'model_path' argument is deprecated, please use 'model_paths' in the future.
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/calculators/mace.py:197: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+WARNING:root:'model_path' argument is deprecated, please use 'model_paths' in the future.
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/calculators/mace.py:197: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+WARNING:root:'model_path' argument is deprecated, please use 'model_paths' in the future.
+/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/mace/calculators/mace.py:197: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/pfs/data6/home/ka/ka_iti/ka_ds7488/al_project/Active-Learning-Workflow/loop_3/scripts/run_ga.py:79: FutureWarning: Please use atoms.calc = calc
+  atoms.set_calculator(committee_calc)    # this gives a future warning
+/pfs/data6/home/ka/ka_iti/ka_ds7488/al_project/Active-Learning-Workflow/loop_3/scripts/run_ga.py:126: FutureWarning: Please use atoms.calc = calc
+  child.set_calculator(committee_calc)    # this gives a future warning
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+0
+[train] runs/iter000/boot_001/config.yaml
+[train] runs/iter000/boot_002/config.yaml
+[train] runs/iter000/boot_003/config.yaml
+[train] runs/iter000/boot_004/config.yaml
+[train] runs/iter000/boot_005/config.yaml
+Test error mean:  107.97999999999999
+Second error mean:  67.84
+Average mae per atom on test data in stage one:  107.97999999999999
+Average mae per atom on test datain stage two:  67.84
+Structure  0  is sucessfully created.
+Structure  1  is sucessfully created.
+Structure  2  is sucessfully created.
+Structure  3  is sucessfully created.
+Structure  4  is sucessfully created.
+Structure  5  is sucessfully created.
+Structure  6  is sucessfully created.
+Structure  7  is sucessfully created.
+Structure  8  is sucessfully created.
+Structure  9  is sucessfully created.
+Using head Default out of ['Default']
+No dtype selected, switching to float64 to match model dtype.
+Using head Default out of ['Default']
+No dtype selected, switching to float64 to match model dtype.
+Using head Default out of ['Default']
+No dtype selected, switching to float64 to match model dtype.
+Using head Default out of ['Default']
+No dtype selected, switching to float64 to match model dtype.
+Using head Default out of ['Default']
+No dtype selected, switching to float64 to match model dtype.
+[GA] Relaxing initial random structure confid=2
+[Relax] Energy from calculator = -444.5613302558239
+[GA] Relaxing initial random structure confid=3
+[Relax] Energy from calculator = -444.56128973814776
+[GA] Relaxing initial random structure confid=4
+[Relax] Energy from calculator = -444.56134456861935
+[GA] Relaxing initial random structure confid=5
+[Relax] Energy from calculator = -444.5613186945211
+[GA] Relaxing initial random structure confid=6
+[Relax] Energy from calculator = -444.56126503035404
+[GA] Relaxing initial random structure confid=7
+[Relax] Energy from calculator = -444.56136120172323
+[GA] Relaxing initial random structure confid=8
+[Relax] Energy from calculator = -444.561297655415
+[GA] Relaxing initial random structure confid=9
+[Relax] Energy from calculator = -444.5613123280091
+[GA] Relaxing initial random structure confid=10
+[Relax] Energy from calculator = -444.56128446914454
+[GA] Relaxing initial random structure confid=11
+[Relax] Energy from calculator = -444.5612809819439
+
+[Population] Current population size: 10
+
+[GA] Starting candidate 1/10
+[GA] Selected parents:
+   Parent 1: confid=2
+   Parent 2: confid=7
+[GA] Mutation applied.
+Offspring relaxation starts.
+
+[GA] Starting candidate 2/10
+[GA] Selected parents:
+   Parent 1: confid=4
+   Parent 2: confid=9
+[GA] Mutation applied.
+Offspring relaxation starts.
+
+[GA] Starting candidate 3/10
+[GA] Selected parents:
+   Parent 1: confid=25
+   Parent 2: confid=10
+[GA] Mutation applied.
+Offspring relaxation starts.
+
+[GA] Starting candidate 4/10
+[GA] Selected parents:
+   Parent 1: confid=22
+   Parent 2: confid=28
+[GA] Mutation applied.
+Offspring relaxation starts.
+
+[GA] Starting candidate 5/10
+[GA] Selected parents:
+   Parent 1: confid=4
+   Parent 2: confid=31
+[GA] Mutation applied.
+Offspring relaxation starts.
+
+[GA] Starting candidate 6/10
+[GA] Selected parents:
+   Parent 1: confid=2
+   Parent 2: confid=28
+[GA] Mutation applied.
+Offspring relaxation starts.
+
+[GA] Starting candidate 7/10
+[GA] Selected parents:
+   Parent 1: confid=7
+   Parent 2: confid=5
+[GA] Mutation applied.
+Offspring relaxation starts.
+
+[GA] Starting candidate 8/10
+[GA] Selected parents:
+   Parent 1: confid=5
+   Parent 2: confid=4
+[GA] Mutation applied.
+Offspring relaxation starts.
+
+[GA] Starting candidate 9/10
+[GA] Selected parents:
+   Parent 1: confid=40
+   Parent 2: confid=31
+Offspring relaxation starts.
+
+[GA] Starting candidate 10/10
+[GA] Selected parents:
+   Parent 1: confid=40
+   Parent 2: confid=46
+Offspring relaxation starts.
+confid=40, raw score=444.56130649832255, energy uncertainty=0.04630013275623721, force uncertainty=1.4197106537311747e-05
+confid=9, raw score=444.5613123280091, energy uncertainty=0.046300011539234624, force uncertainty=1.1064993311743821e-05
+confid=37, raw score=444.56131224883063, energy uncertainty=0.04629971963867641, force uncertainty=1.3145596640375918e-05
+confid=25, raw score=444.56131736772124, energy uncertainty=0.046299530440600006, force uncertainty=8.28067068125254e-06
+confid=5, raw score=444.5613186945211, energy uncertainty=0.04629950409995561, force uncertainty=1.1412875923244524e-05
+confid=46, raw score=444.56132630998616, energy uncertainty=0.046299065685032406, force uncertainty=1.482414711441311e-05
+confid=2, raw score=444.5613302558239, energy uncertainty=0.04629890839530689, force uncertainty=1.137174783590036e-05
+confid=4, raw score=444.56134456861935, energy uncertainty=0.04629790568613667, force uncertainty=1.3464274146940714e-05
+confid=31, raw score=444.5613538587557, energy uncertainty=0.04629729828003179, force uncertainty=5.144823848129215e-06
+confid=7, raw score=444.56136120172323, energy uncertainty=0.04629657938520242, force uncertainty=1.1387823030527038e-05
+Wrote 10 structures → data/iter000/selected_for_dft.xyz
+[DFT] Loaded 10 structures from data/iter000/selected_for_dft.xyz
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/pfs/data6/home/ka/ka_iti/ka_ds7488/al_project/Active-Learning-Workflow/loop_3/scripts/submit_dft.py", line 39, in relax_one
+    dyn.run(fmax=fmax, steps=steps)
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/optimize/optimize.py", line 417, in run
+    return Dynamics.run(self, steps=steps)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/optimize/optimize.py", line 286, in run
+    for converged in Dynamics.irun(self, steps=steps):
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/optimize/optimize.py", line 236, in irun
+    self.optimizable.get_forces()
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/optimize/optimize.py", line 37, in get_forces
+    return self.atoms.get_forces()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/atoms.py", line 829, in get_forces
+    forces = self._calc.get_forces(self)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/calculators/turbomole/turbomole.py", line 539, in get_forces
+    self.get_potential_energy(atoms)
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/calculators/turbomole/turbomole.py", line 524, in get_potential_energy
+    self.converged = read_convergence(self.restart, self.parameters)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/site-packages/ase/calculators/turbomole/reader.py", line 161, in read_convergence
+    raise RuntimeError('scf failed to converge')
+RuntimeError: scf failed to converge
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+           ^^^^^^^^^^^^^^^^
+  File "/pfs/data6/home/ka/ka_iti/ka_ds7488/al_project/Active-Learning-Workflow/loop_3/scripts/submit_dft.py", line 57, in relax_one
+    a.info['key_value_pairs']['raw_score'] = float(-1e6)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'key_value_pairs'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/pfs/data6/home/ka/ka_iti/ka_ds7488/al_project/Active-Learning-Workflow/loop_3/active_learning_loop.py", line 54, in <module>
+    submit_dft(cfg, it)
+  File "/pfs/data6/home/ka/ka_iti/ka_ds7488/al_project/Active-Learning-Workflow/loop_3/scripts/submit_dft.py", line 104, in submit_dft
+    results = p.map(relax_one, frames_with_idx)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ka/ka_iti/ka_ds7488/miniconda3/envs/gpaw-env/lib/python3.11/multiprocessing/pool.py", line 774, in get
+    raise self._value
+KeyError: 'key_value_pairs'
+[DFT] Relaxing confid=N/A
+[DFT] confid=N/A, atoms_010 FAILED (SCF): scf failed to converge
+[DFT] Relaxing confid=N/A
+[DFT] confid=N/A, atoms_001 FAILED (SCF): scf failed to converge
+[DFT] Relaxing confid=N/A
+[DFT] confid=N/A, atoms_006 FAILED (SCF): scf failed to converge
+[DFT] Relaxing confid=N/A
+[DFT] confid=N/A, atoms_003 FAILED (SCF): scf failed to converge
+[DFT] Relaxing confid=N/A
+[DFT] confid=N/A, atoms_004 FAILED (SCF): scf failed to converge
+[DFT] Relaxing confid=N/A
+[DFT] confid=N/A, atoms_005 FAILED (SCF): scf failed to converge
+[DFT] Relaxing confid=N/A
+[DFT] confid=N/A, atoms_002 FAILED (SCF): scf failed to converge
+[DFT] Relaxing confid=N/A
+[DFT] confid=N/A, atoms_009 FAILED (SCF): scf failed to converge
+[DFT] Relaxing confid=N/A
+[DFT] confid=N/A, atoms_008 FAILED (SCF): scf failed to converge
+[DFT] Relaxing confid=N/A
+[DFT] confid=N/A, atoms_007 FAILED (SCF): scf failed to converge
+
+============================= JOB FEEDBACK =============================
+
+NodeName=uc3n003
+Job ID: 1310682
+Cluster: uc3
+User/Group: ka_ds7488/ka_iti
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 20
+CPU Utilized: 1-05:02:19
+CPU Efficiency: 41.56% of 2-21:52:00 core-walltime
+Job Wall-clock time: 03:29:36
+Memory Utilized: 2.85 GB
+Memory Efficiency: 7.30% of 39.06 GB (1.95 GB/core)
