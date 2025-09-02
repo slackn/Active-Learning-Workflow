@@ -54,26 +54,55 @@ for it in range(0, cfg["active_learning"]["iterations"]):
     submit_dft(cfg, it)
     # Check if there are successfully converged structures, if not run the genetic algorithm again
     relaxed_file_path=Path(f"data/iter{it:03d}/dft_relaxed.xyz")
-    if file_path.exists():
-         # Read all structures in the XYZ file
-        structures = read(relaxed_file_path, index=":")  # index=":" reads all frames
-        if len(structures) > 5:
-            print(f"{relaxed_file_path} exists and has {len(structures)} structures → OK")
+
+
+    def is_enough(path, min_structs=5):
+        if not path.exists():
+            return False
+        structures= read(path, index=":")
+        return len(structures)> min_structs
+
+    max_retries=3
+    retries=0
+
+    while not is_enough(relaxed_file_path):
+        if retries<max_retries:
+            print("Number of dft relaxed structures is not enough, running the GA again!")
+            run_ga(cfg,it)
+            submit_dft(cfg, it)
+            retries+=1
         else:
-            print(f"{relaxed_file_path} exists but has only {len(structures)} structures. Running GA again!")
-            run_ga(cfg, it)
+            print("Starting the GA with a different random population!")
+            create_db(cfg,it)
+            run_ga(cfg,it)
+            submit_dft(cfg, it)
+            
+
+            # Check again — if still not enough, skip iteration completely
+            if not is_enough(relaxed_file_path):
+                print(f"[Iter {it}] Skipping merge_datasets due to insufficient structures.")
+                break
+            else:
+                print(f"[Iter {it}] Success after regenerating random population.")
+                break   # exit while loop
     else:
-        print(f"{relaxed_file_path} does not exist! Running the genetic algorithm again!")
-        run_ga(cfg, it)
+        # This runs only if the while loop exited normally (not via break)
+        print(f"[Iter {it}] GA successful on retry {retries}.")
+
+
+    if is_enough(relaxed_file_path):
+        print("Merging the datasets...")
+        merge_datasets(it, include_failed=False)
+    """ print("The GA was successfull! Merging the datasets...")
     # Merge dft labels and existing data
-    merge_datasets(it, include_failed=False)
+    merge_datasets(it, include_failed=False) """
 
 
 # plot mae vs iteration index
 plt.figure(figsize=(6,4))
 # Plot both lists
-plt.plot(first_maes,  marker="o", label="First TEST MAE")
-plt.plot(second_maes, marker="s", label="Second TEST MAE")
+plt.plot(first_average_errors,  marker="o", label="First TEST MAE")
+plt.plot(second_average_errors, marker="s", label="Second TEST MAE")
 # Labels & title
 plt.title("TEST MAE values across runs")
 plt.xlabel("Run index")

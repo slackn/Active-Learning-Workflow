@@ -159,10 +159,11 @@ def run_ga(cfg:dict, iteration):
     # Save highest n_dft number of structures 
     n_dft = min(n_dft, len(candidates_list))    #candidates list might be smaller than n_dft
     selected = candidates_list[:n_dft]
-    out_xyz=f"data/iter{iteration:03d}/selected_for_dft.xyz"
+
+    out_xyz=f"data/iter{iteration:03d}/selected_for_dft.extxyz"
     Path(out_xyz).parent.mkdir(parents=True, exist_ok=True)
 
-    write(out_xyz, selected, format="xyz")  # classic XYZ, no structured metadata
+    write(out_xyz, selected, format="extxyz")  # classic XYZ, no structured metadata
     print(f"Wrote {len(selected)} structures → {out_xyz}")
 
 

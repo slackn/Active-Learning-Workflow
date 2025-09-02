@@ -70,9 +70,9 @@ def submit_dft(cfg, iteration):
     element = cfg["initialization"]["element"]
 
     iterdir = Path(f"data/iter{iteration:03d}")
-    in_xyz  = iterdir / "selected_for_dft.xyz"
-    out_ok  = iterdir / "dft_relaxed.xyz"
-    out_bad = iterdir / "dft_failed.xyz"
+    in_xyz  = iterdir / "selected_for_dft.extxyz"
+    out_ok  = iterdir / "dft_relaxed.extxyz"
+    out_bad = iterdir / "dft_failed.extxyz"
 
     TM_PARAMS = {
         "total charge": cfg["dft"]["total_charge"],
