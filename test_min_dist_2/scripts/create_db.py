@@ -34,7 +34,7 @@ def create_db(cfg:dict,iteration):
     # 3. Set minimum interatomic distances
     # Not sure if it works
     blmin = closest_distances_generator(atom_numbers=[Z], 
-                                    ratio_of_covalent_radii=0.9)
+                                    ratio_of_covalent_radii=1)
     # for ratio of 0.7, closest distance is 2.6 A
     # for ratio of 0.8, closest distance is 2.98 A
 
