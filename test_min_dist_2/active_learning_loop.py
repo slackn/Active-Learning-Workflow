@@ -33,19 +33,19 @@ second_average_errors=[]
 
 for it in range(0, cfg["active_learning"]["iterations"]):
     print(it)
-    
-    #Prepare bootstrapped training datasets
-    manifest=run_bootstrap(cfg, iteration=it)
+    if it!=0:
+        #Prepare bootstrapped training datasets
+        manifest=run_bootstrap(cfg, iteration=it)
 
-    manifest_path=Path(manifest["outdir"]) / "manifest.json"
-    # Train ensemble for this iteration 
-    train_ensemble_for_iteration(cfg, manifest_path)
-    # Compute mean test MAE after training
-    first_mae, second_mae = compute_mean_test_mae_for_iteration(it)
-    first_average_errors.append(first_mae)
-    second_average_errors.append(second_mae)
-    print("Average mae per atom on test data in stage one: ", first_mae)
-    print("Average mae per atom on test datain stage two: ", second_mae)
+        manifest_path=Path(manifest["outdir"]) / "manifest.json"
+        # Train ensemble for this iteration 
+        train_ensemble_for_iteration(cfg, manifest_path)
+        # Compute mean test MAE after training
+        first_mae, second_mae = compute_mean_test_mae_for_iteration(it)
+        first_average_errors.append(first_mae)
+        second_average_errors.append(second_mae)
+        print("Average mae per atom on test data in stage one: ", first_mae)
+        print("Average mae per atom on test datain stage two: ", second_mae)
     # Create initial random population
     create_db(cfg, it)
     # Run genetic algorithm and select uncertain candidates
