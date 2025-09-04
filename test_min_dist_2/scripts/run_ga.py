@@ -41,7 +41,7 @@ def run_ga(cfg:dict, iteration):
     # Define geometric constraints
     slab= db.get_slab()
     all_atom_types=get_all_atom_types(slab, atom_numbers)
-    blmin= closest_distances_generator(all_atom_types, ratio_of_covalent_radii=0.8)
+    blmin= closest_distances_generator(all_atom_types, ratio_of_covalent_radii=0.9)
 
     # Comparator: to get distinct canidadates
     comparator= InteratomicDistanceComparator(
