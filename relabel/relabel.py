@@ -6,16 +6,15 @@ from ase.units import Hartree, Bohr
 import numpy as np
 
 # ----- User settings -----
-input_file = "dataset_iter000.xyz"  # your multi-frame .xyz/.extxyz
+input_file = "new_dataset.xyz"  # your multi-frame .xyz/.extxyz
 output_file = "dataset_relabelled.extxyz"
 params = {
-    'total charge': 0,
+    'total charge': -1,
     'multiplicity': 1,
     'scf iterations': 1000,
-    'basis set name': 'def2-TZVP',
+    'basis set name': 'def-SV(P)',
     'density functional': 'pbe'
-    #'basis set name':'dhf-TZVP',
-    #'density functional':'tpss'
+
 }
 
 if shutil.which("define") is None:

@@ -6,8 +6,11 @@
 #SBATCH --cpus-per-task=1    # only one thread
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=sila.horozoglu@sabanciuniv.edu
-#SBATCH --job-name=al_Na8
+#SBATCH --job-name=relabel
+
+module load chem/turbomole/7.9
 
 eval "$(conda shell.bash hook)"
 conda activate gpaw-env
+
 python relabel.py
