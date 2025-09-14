@@ -11,7 +11,7 @@ output_file = "dataset_relabelled.extxyz"
 params = {
     'total charge': -1,
     'multiplicity': 1,
-    'scf iterations': 1000,
+    'scf iterations': 800,
     'basis set name': 'def-SV(P)',
     'density functional': 'pbe'
 
