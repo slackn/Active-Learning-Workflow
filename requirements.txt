@@ -1,0 +1,5 @@
+numpy
+PyYAML
+ase
+matplotlib
+mace

@@ -1,0 +1,23 @@
+The existing workflow has two problems:
+
+1. Local minima of clusters in the dataset is generated with wavelets as basis functions using BigDFT package but it is not available in Turbomole. Therefore, DFT relaxation results in very different values for total energies (-35200 eV for Turbomole vs -430 eV for BigDFT). This is a problem for training the model.
+    - Solution 1: Get into contact with authors
+    - Solution 2: Using BigDFT 
+    - Solution 2: Relabelling the dataset 
+
+2. Training data is just relaxed structures. 
+Solution: The workflow should be adjusted in a way that it saves unrelaxed structures during optimization trajectory.
+The updated workflow should look like this:
+Workflow
+1. Initial training of 5 models with bootstrapped datasets (excl. Na8(0))
+2. Create random initial population of clusters for genetic algorithm
+3. Run the genetic algorithm 
+    a. Generate random clusters
+    b. Relax clusters with MACE model as calculator, step by step
+    c. For every step, get uncertainty
+    d. Add geometries with uncertainty above threshold to dft-queue. If DFT queue has X structures, stop and go to {4}
+    e. If no uncertainty above threshold: truest MACE, continue with GA: Select two parents, generate offspring and apply mutation 
+    f. If any step during relaxation shows high uncertainty: discard this cluster, make a new random cluster and proceed with (b)
+4. Run dft calculations for uncertain structures with Turbomole
+5. Merge the new datapoints with existing dataset
+6. Retrain the models, go to step 2
